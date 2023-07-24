@@ -32,7 +32,7 @@ bool Plane::intersect(const Ray &r, Hit &h, float tmin) {
 
 void Plane::paint(){
     Vec3f color = this->mat->getDiffuseColor();
-
+    this->mat->glSetMaterial();
 
     const int size = 1e4;
     Vec3f x_axis(1.0f, 0.0f, 0.0f);
@@ -50,7 +50,6 @@ void Plane::paint(){
     Vec3f pos4 = center + size * x - size * z; 
 
     glBegin(GL_QUADS);
-    glColor3f(color.x(), color.y(), color.z());
     glNormal3f(normal.x(), normal.y(), normal.z());
     glVertex3f(pos1.x(), pos1.y(), pos1.z());
     glVertex3f(pos2.x(), pos2.y(), pos2.z());

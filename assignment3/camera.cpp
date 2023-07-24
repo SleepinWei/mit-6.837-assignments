@@ -54,14 +54,14 @@ void OrthographicCamera::dollyCamera(float dist)
 
 void OrthographicCamera::truckCamera(float dx, float dy)
 {
-//   Vec3f horizontal;
-//   Vec3f::Cross3(horizontal, direction, up);
-//   horizontal.Normalize();
+  Vec3f horizontal;
+  Vec3f::Cross3(horizontal, direction, up);
+  horizontal.Normalize();
 
-//   Vec3f screenUp;
-//   Vec3f::Cross3(screenUp, horizontal, direction);
+  Vec3f screenUp;
+  Vec3f::Cross3(screenUp, horizontal, direction);
 
-  center += horizontal*dx + up*dy;
+  center += horizontal*dx + screenUp*dy;
 
   // ===========================================
   // ASSIGNMENT 3: Fix any other affected values
@@ -77,9 +77,9 @@ void OrthographicCamera::truckCamera(float dx, float dy)
 
 void OrthographicCamera::rotateCamera(float rx, float ry)
 {
-//   Vec3f horizontal;
-//   Vec3f::Cross3(horizontal, direction, up);
-//   horizontal.Normalize();
+  Vec3f horizontal;
+  Vec3f::Cross3(horizontal, direction, up);
+  horizontal.Normalize();
 
   // Don't let the model flip upside-down (There is a singularity
   // at the poles when 'up' and 'direction' are aligned)
@@ -98,27 +98,20 @@ void OrthographicCamera::rotateCamera(float rx, float ry)
   // ===========================================
   // ASSIGNMENT 3: Fix any other affected values
   // ===========================================
-  rotMat.TransformDirection(up);
-  rotMat.TransformDirection(horizontal);
-  up.Normalize();
-  horizontal.Normalize();
+//   rotMat.TransformDirection(up);
+//   rotMat.TransformDirection(horizontal);
+//   up.Normalize();
+//   horizontal.Normalize();
 }
 
 OrthographicCamera::OrthographicCamera(Vec3f center, Vec3f direction, Vec3f up, float image_size){
     this->center = center;
 
-    float len2 = direction.Length();
-    direction.Divide(len2, len2, len2);
-    this->direction = direction; 
+    this->direction = direction;
+    this->direction.Normalize();
 
-    float len1 = up.Length();
-    up.Divide(len1, len1, len1);
-
-    Vec3f::Cross3(this->horizontal, direction, up);
-    horizontal.Normalize();
-
-    Vec3f::Cross3(this->up, this->horizontal, direction);
-    up.Normalize();
+    this->up = up;
+    this->up.Normalize();
 
     this->image_size = image_size;
 }
@@ -128,11 +121,19 @@ float OrthographicCamera::getTMin() const{
 }
 
 Ray OrthographicCamera::generateRay(Vec2f point){
+    Vec3f horizontal;
+    Vec3f::Cross3(horizontal, direction, up);
+    horizontal.Normalize();
+
+    Vec3f _up;
+    Vec3f::Cross3(_up, horizontal, direction);
+    _up.Normalize();
+
     Vec3f origin = center;
     point *= 2; 
     Vec2f::Sub(point, point, {1.0f, 1.0f}); // -1 ~ 1
 
-    origin += 0.5 * point.x() * horizontal * image_size + point.y() * up * 0.5 * image_size;
+    origin += 0.5 * point.x() * horizontal * image_size + point.y() * _up * 0.5 * image_size;
 
     return Ray(origin, this->direction);
 }

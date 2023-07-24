@@ -6,11 +6,8 @@ public:
     Vec3f center;
     float radius;
 
-    int tessx;
-    int tessy; 
-
 public:
-    Sphere(Vec3f center, float radius, Material *mat,int tessx=10,int tessy=10);
+    Sphere(Vec3f center, float radius, Material *mat);
 
     virtual bool intersect(const Ray &r, Hit &h, float tmin) override;
 

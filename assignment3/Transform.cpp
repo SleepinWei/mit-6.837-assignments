@@ -72,9 +72,9 @@ void Transform::paint(){
     glPushMatrix();
     GLfloat *glMatrix = this->m.glGet();
     glMultMatrixf(glMatrix);
-    delete[] glMatrix;
 
     o->paint();
 
     glPopMatrix();
+    delete[] glMatrix;
 }

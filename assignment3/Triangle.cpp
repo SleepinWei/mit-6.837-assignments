@@ -53,9 +53,7 @@ void Triangle::paint(){
     Vec3f specular = this->mat->getSpecularColor();
     // glColor3f(color.x(), color.y(), color.z());
     // geometry
-    glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, mat->getExponent());
-    glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, (float*)&color);
-    glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, (float*)&specular);
+    mat->glSetMaterial();
 
     glBegin(GL_TRIANGLES);
     glNormal3f(normal.x(), normal.y(), normal.z());

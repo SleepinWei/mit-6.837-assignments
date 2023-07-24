@@ -25,7 +25,10 @@ char *normals_file = NULL;
 bool shade_back = false;
 bool enable_depth = false;
 bool enable_normal = false;
-bool enable_gui = false; 
+bool enable_gui = false;
+int tessx = 5;
+int tessy = 5;
+bool enable_gouraud = false;
 SceneParser* p_parser; 
 
 void renderFunction(){
@@ -120,6 +123,16 @@ int main(int argc, char** argv){
 	   else if (!strcmp(argv[i],"-gui")){
 		assert(i < argc);
 		enable_gui = true; 
+	   }
+	   else if (!strcmp(argv[i],"-tessellation")){
+		++i;
+		assert(i < argc);
+		tessx = atof(argv[i]);
+		++i;
+		tessy = atof(argv[i]);
+	   }
+	   else if (!strcmp(argv[i],"-gouraud")){
+		enable_gouraud = true;
 	   }
 	  else {
 		printf ("whoops error with command line argument %d: '%s'\n",i,argv[i]);

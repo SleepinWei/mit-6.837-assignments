@@ -74,8 +74,10 @@ Vec3f PhongMaterial::Shade(const Ray &ray, const Hit &hit, const Vec3f &dirToLig
   Vec3f v;
   v -= ray.getDirection(); // -dir
   Vec3f normal = hit.getNormal();
+
   Vec3f h = 0.5f * (dirToLight + v);
   h.Normalize();
+
   float NdotH = max(h.Dot3(normal),0.0f);
 
     // specular 

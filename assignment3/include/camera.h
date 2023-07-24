@@ -17,7 +17,6 @@ public:
 class OrthographicCamera : public Camera{
 public:
     Vec3f center;
-    Vec3f horizontal;
     Vec3f up;
     Vec3f direction;
     float image_size;
@@ -40,7 +39,6 @@ public:
     Vec3f direction;
     Vec3f up;
     float angle;
-    Vec3f horizontal; 
 
 public:
     PerspectiveCamera(Vec3f &center, Vec3f &direction, Vec3f &up, float angle);

@@ -2,12 +2,16 @@
 #include"material.h"
 #include"ray.h"
 #include"hit.h"
+#include<GL/freeglut.h>
 
 Triangle::Triangle(Vec3f &a, Vec3f &b, Vec3f &c, Material *m){
     this->a = a;
     this->b = b;
     this->c = c;
-    this->m = m; 
+    this->mat = m; 
+
+    Vec3f::Cross3(normal, b - a, c - a);
+    normal.Normalize();
 }
 
 bool Triangle::intersect(const Ray &r, Hit &h, float tmin) {
@@ -38,8 +42,28 @@ bool Triangle::intersect(const Ray &r, Hit &h, float tmin) {
         Vec3f normal;
         Vec3f::Cross3(normal, E1, E2);
         normal.Normalize();
-        h.set(t, this->m, normal, r);
+        h.set(t, this->mat, normal, r);
     }
 
     return true;
+}
+
+void Triangle::paint(){
+    Vec3f color = this->mat->getDiffuseColor();
+    Vec3f specular = this->mat->getSpecularColor();
+    // glColor3f(color.x(), color.y(), color.z());
+    // geometry
+    glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, mat->getExponent());
+    glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, (float*)&color);
+    glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, (float*)&specular);
+
+    glBegin(GL_TRIANGLES);
+    glNormal3f(normal.x(), normal.y(), normal.z());
+    glColor3f(1.0f, 0.0f, 0.0f);
+
+
+    glVertex3f(a.x(), a.y(),a.z());
+    glVertex3f(b.x(), b.y(), b.z());
+    glVertex3f(c.x(), c.y(), c.z());
+    glEnd(); 
 }

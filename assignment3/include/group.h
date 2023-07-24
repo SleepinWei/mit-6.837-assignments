@@ -10,6 +10,8 @@ public:
 
     void addObject(int index, Object3D *obj);
 
+    virtual void paint();
+
 public:
     Group(int number);
 };

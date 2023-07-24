@@ -23,3 +23,9 @@ bool Group::intersect(const Ray&r, Hit& h,float tmin){
     }
     return result; 
 }
+
+void Group::paint(){
+    for(auto inst: instances){
+        inst->paint();
+    }
+}

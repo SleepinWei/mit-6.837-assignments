@@ -9,12 +9,13 @@ class Plane: public Object3D{
 public:
     Vec3f normal;
     float d;
-    Material *m; 
 
 public:
     Plane(Vec3f &normal, float d, Material *m);
 
     virtual bool intersect(const Ray &r, Hit &h, float tmin) override;
+
+    virtual void paint();
 };
 
 #endif // !PLANE_H

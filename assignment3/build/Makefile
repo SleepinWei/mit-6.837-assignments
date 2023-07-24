@@ -47,27 +47,27 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = D:\ProgramFiles\Cmake\bin\cmake.exe
+CMAKE_COMMAND = C:\Users\Admin\Documents\mingw64\bin\cmake.exe
 
 # The command to remove a file.
-RM = D:\ProgramFiles\Cmake\bin\cmake.exe -E rm -f
+RM = C:\Users\Admin\Documents\mingw64\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\ComputerScience\Graphics\MIT\assignment3
+CMAKE_SOURCE_DIR = C:\Users\Admin\Documents\mit\assignment3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\ComputerScience\Graphics\MIT\assignment3\build
+CMAKE_BINARY_DIR = C:\Users\Admin\Documents\mit\assignment3\build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	D:\ProgramFiles\Cmake\bin\cmake-gui.exe -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	C:\Users\Admin\Documents\mingw64\bin\cmake.exe -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	D:\ProgramFiles\Cmake\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	C:\Users\Admin\Documents\mingw64\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\ComputerScience\Graphics\MIT\assignment3\build\CMakeFiles D:\ComputerScience\Graphics\MIT\assignment3\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Admin\Documents\mit\assignment3\build\CMakeFiles C:\Users\Admin\Documents\mit\assignment3\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\ComputerScience\Graphics\MIT\assignment3\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Admin\Documents\mit\assignment3\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,6 +129,66 @@ raytracer/fast:
 .PHONY : raytracer/fast
 
 # target to build an object file
+Plane.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/Plane.obj
+.PHONY : Plane.obj
+
+# target to preprocess a source file
+Plane.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/Plane.i
+.PHONY : Plane.i
+
+# target to generate assembly for a file
+Plane.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/Plane.s
+.PHONY : Plane.s
+
+# target to build an object file
+Transform.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/Transform.obj
+.PHONY : Transform.obj
+
+# target to preprocess a source file
+Transform.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/Transform.i
+.PHONY : Transform.i
+
+# target to generate assembly for a file
+Transform.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/Transform.s
+.PHONY : Transform.s
+
+# target to build an object file
+Triangle.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/Triangle.obj
+.PHONY : Triangle.obj
+
+# target to preprocess a source file
+Triangle.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/Triangle.i
+.PHONY : Triangle.i
+
+# target to generate assembly for a file
+Triangle.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/Triangle.s
+.PHONY : Triangle.s
+
+# target to build an object file
+camera.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/camera.obj
+.PHONY : camera.obj
+
+# target to preprocess a source file
+camera.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/camera.i
+.PHONY : camera.i
+
+# target to generate assembly for a file
+camera.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/camera.s
+.PHONY : camera.s
+
+# target to build an object file
 glCanvas.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/glCanvas.obj
 .PHONY : glCanvas.obj
@@ -142,6 +202,36 @@ glCanvas.i:
 glCanvas.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/glCanvas.s
 .PHONY : glCanvas.s
+
+# target to build an object file
+group.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/group.obj
+.PHONY : group.obj
+
+# target to preprocess a source file
+group.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/group.i
+.PHONY : group.i
+
+# target to generate assembly for a file
+group.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/group.s
+.PHONY : group.s
+
+# target to build an object file
+image.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/image.obj
+.PHONY : image.obj
+
+# target to preprocess a source file
+image.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/image.i
+.PHONY : image.i
+
+# target to generate assembly for a file
+image.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/image.s
+.PHONY : image.s
 
 # target to build an object file
 light.obj:
@@ -159,6 +249,51 @@ light.s:
 .PHONY : light.s
 
 # target to build an object file
+main.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/main.obj
+.PHONY : main.obj
+
+# target to preprocess a source file
+main.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/main.i
+.PHONY : main.i
+
+# target to generate assembly for a file
+main.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/main.s
+.PHONY : main.s
+
+# target to build an object file
+material.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/material.obj
+.PHONY : material.obj
+
+# target to preprocess a source file
+material.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/material.i
+.PHONY : material.i
+
+# target to generate assembly for a file
+material.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/material.s
+.PHONY : material.s
+
+# target to build an object file
+matrix.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/matrix.obj
+.PHONY : matrix.obj
+
+# target to preprocess a source file
+matrix.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/matrix.i
+.PHONY : matrix.i
+
+# target to generate assembly for a file
+matrix.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/matrix.s
+.PHONY : matrix.s
+
+# target to build an object file
 scene_parser.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/scene_parser.obj
 .PHONY : scene_parser.obj
@@ -173,6 +308,21 @@ scene_parser.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/scene_parser.s
 .PHONY : scene_parser.s
 
+# target to build an object file
+sphere.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/sphere.obj
+.PHONY : sphere.obj
+
+# target to preprocess a source file
+sphere.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/sphere.i
+.PHONY : sphere.i
+
+# target to generate assembly for a file
+sphere.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\raytracer.dir\build.make CMakeFiles/raytracer.dir/sphere.s
+.PHONY : sphere.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -182,15 +332,45 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... raytracer
+	@echo ... Plane.obj
+	@echo ... Plane.i
+	@echo ... Plane.s
+	@echo ... Transform.obj
+	@echo ... Transform.i
+	@echo ... Transform.s
+	@echo ... Triangle.obj
+	@echo ... Triangle.i
+	@echo ... Triangle.s
+	@echo ... camera.obj
+	@echo ... camera.i
+	@echo ... camera.s
 	@echo ... glCanvas.obj
 	@echo ... glCanvas.i
 	@echo ... glCanvas.s
+	@echo ... group.obj
+	@echo ... group.i
+	@echo ... group.s
+	@echo ... image.obj
+	@echo ... image.i
+	@echo ... image.s
 	@echo ... light.obj
 	@echo ... light.i
 	@echo ... light.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
+	@echo ... material.obj
+	@echo ... material.i
+	@echo ... material.s
+	@echo ... matrix.obj
+	@echo ... matrix.i
+	@echo ... matrix.s
 	@echo ... scene_parser.obj
 	@echo ... scene_parser.i
 	@echo ... scene_parser.s
+	@echo ... sphere.obj
+	@echo ... sphere.i
+	@echo ... sphere.s
 .PHONY : help
 
 

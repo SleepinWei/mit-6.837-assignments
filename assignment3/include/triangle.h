@@ -9,11 +9,14 @@ public:
     Vec3f a;
     Vec3f b;
     Vec3f c;
-    Material* m; 
+
+    Vec3f normal; 
 
 public:
     Triangle(Vec3f &a, Vec3f &b, Vec3f &c, Material *m);
     virtual bool intersect(const Ray &r, Hit &h, float tmin) override;
+
+    virtual void paint();
 };
 
 #endif // !TRIANGLE_H

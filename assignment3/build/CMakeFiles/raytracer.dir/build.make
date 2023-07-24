@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = D:\ProgramFiles\Cmake\bin\cmake.exe
+CMAKE_COMMAND = C:\Users\Admin\Documents\mingw64\bin\cmake.exe
 
 # The command to remove a file.
-RM = D:\ProgramFiles\Cmake\bin\cmake.exe -E rm -f
+RM = C:\Users\Admin\Documents\mingw64\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\ComputerScience\Graphics\MIT\assignment3
+CMAKE_SOURCE_DIR = C:\Users\Admin\Documents\mit\assignment3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\ComputerScience\Graphics\MIT\assignment3\build
+CMAKE_BINARY_DIR = C:\Users\Admin\Documents\mit\assignment3\build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/raytracer.dir/depend.make
@@ -68,72 +68,243 @@ include CMakeFiles/raytracer.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/raytracer.dir/flags.make
 
+CMakeFiles/raytracer.dir/Plane.obj: CMakeFiles/raytracer.dir/flags.make
+CMakeFiles/raytracer.dir/Plane.obj: CMakeFiles/raytracer.dir/includes_CXX.rsp
+CMakeFiles/raytracer.dir/Plane.obj: C:/Users/Admin/Documents/mit/assignment3/Plane.cpp
+CMakeFiles/raytracer.dir/Plane.obj: CMakeFiles/raytracer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Admin\Documents\mit\assignment3\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/raytracer.dir/Plane.obj"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/Plane.obj -MF CMakeFiles\raytracer.dir\Plane.obj.d -o CMakeFiles\raytracer.dir\Plane.obj -c C:\Users\Admin\Documents\mit\assignment3\Plane.cpp
+
+CMakeFiles/raytracer.dir/Plane.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/raytracer.dir/Plane.i"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Admin\Documents\mit\assignment3\Plane.cpp > CMakeFiles\raytracer.dir\Plane.i
+
+CMakeFiles/raytracer.dir/Plane.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/Plane.s"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Admin\Documents\mit\assignment3\Plane.cpp -o CMakeFiles\raytracer.dir\Plane.s
+
+CMakeFiles/raytracer.dir/Transform.obj: CMakeFiles/raytracer.dir/flags.make
+CMakeFiles/raytracer.dir/Transform.obj: CMakeFiles/raytracer.dir/includes_CXX.rsp
+CMakeFiles/raytracer.dir/Transform.obj: C:/Users/Admin/Documents/mit/assignment3/Transform.cpp
+CMakeFiles/raytracer.dir/Transform.obj: CMakeFiles/raytracer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Admin\Documents\mit\assignment3\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/raytracer.dir/Transform.obj"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/Transform.obj -MF CMakeFiles\raytracer.dir\Transform.obj.d -o CMakeFiles\raytracer.dir\Transform.obj -c C:\Users\Admin\Documents\mit\assignment3\Transform.cpp
+
+CMakeFiles/raytracer.dir/Transform.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/raytracer.dir/Transform.i"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Admin\Documents\mit\assignment3\Transform.cpp > CMakeFiles\raytracer.dir\Transform.i
+
+CMakeFiles/raytracer.dir/Transform.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/Transform.s"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Admin\Documents\mit\assignment3\Transform.cpp -o CMakeFiles\raytracer.dir\Transform.s
+
+CMakeFiles/raytracer.dir/Triangle.obj: CMakeFiles/raytracer.dir/flags.make
+CMakeFiles/raytracer.dir/Triangle.obj: CMakeFiles/raytracer.dir/includes_CXX.rsp
+CMakeFiles/raytracer.dir/Triangle.obj: C:/Users/Admin/Documents/mit/assignment3/Triangle.cpp
+CMakeFiles/raytracer.dir/Triangle.obj: CMakeFiles/raytracer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Admin\Documents\mit\assignment3\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/raytracer.dir/Triangle.obj"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/Triangle.obj -MF CMakeFiles\raytracer.dir\Triangle.obj.d -o CMakeFiles\raytracer.dir\Triangle.obj -c C:\Users\Admin\Documents\mit\assignment3\Triangle.cpp
+
+CMakeFiles/raytracer.dir/Triangle.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/raytracer.dir/Triangle.i"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Admin\Documents\mit\assignment3\Triangle.cpp > CMakeFiles\raytracer.dir\Triangle.i
+
+CMakeFiles/raytracer.dir/Triangle.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/Triangle.s"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Admin\Documents\mit\assignment3\Triangle.cpp -o CMakeFiles\raytracer.dir\Triangle.s
+
+CMakeFiles/raytracer.dir/camera.obj: CMakeFiles/raytracer.dir/flags.make
+CMakeFiles/raytracer.dir/camera.obj: CMakeFiles/raytracer.dir/includes_CXX.rsp
+CMakeFiles/raytracer.dir/camera.obj: C:/Users/Admin/Documents/mit/assignment3/camera.cpp
+CMakeFiles/raytracer.dir/camera.obj: CMakeFiles/raytracer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Admin\Documents\mit\assignment3\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/raytracer.dir/camera.obj"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/camera.obj -MF CMakeFiles\raytracer.dir\camera.obj.d -o CMakeFiles\raytracer.dir\camera.obj -c C:\Users\Admin\Documents\mit\assignment3\camera.cpp
+
+CMakeFiles/raytracer.dir/camera.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/raytracer.dir/camera.i"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Admin\Documents\mit\assignment3\camera.cpp > CMakeFiles\raytracer.dir\camera.i
+
+CMakeFiles/raytracer.dir/camera.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/camera.s"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Admin\Documents\mit\assignment3\camera.cpp -o CMakeFiles\raytracer.dir\camera.s
+
 CMakeFiles/raytracer.dir/glCanvas.obj: CMakeFiles/raytracer.dir/flags.make
 CMakeFiles/raytracer.dir/glCanvas.obj: CMakeFiles/raytracer.dir/includes_CXX.rsp
-CMakeFiles/raytracer.dir/glCanvas.obj: D:/ComputerScience/Graphics/MIT/assignment3/glCanvas.cpp
+CMakeFiles/raytracer.dir/glCanvas.obj: C:/Users/Admin/Documents/mit/assignment3/glCanvas.cpp
 CMakeFiles/raytracer.dir/glCanvas.obj: CMakeFiles/raytracer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\ComputerScience\Graphics\MIT\assignment3\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/raytracer.dir/glCanvas.obj"
-	D:\ProgramFiles\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/glCanvas.obj -MF CMakeFiles\raytracer.dir\glCanvas.obj.d -o CMakeFiles\raytracer.dir\glCanvas.obj -c D:\ComputerScience\Graphics\MIT\assignment3\glCanvas.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Admin\Documents\mit\assignment3\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/raytracer.dir/glCanvas.obj"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/glCanvas.obj -MF CMakeFiles\raytracer.dir\glCanvas.obj.d -o CMakeFiles\raytracer.dir\glCanvas.obj -c C:\Users\Admin\Documents\mit\assignment3\glCanvas.cpp
 
 CMakeFiles/raytracer.dir/glCanvas.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/raytracer.dir/glCanvas.i"
-	D:\ProgramFiles\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\ComputerScience\Graphics\MIT\assignment3\glCanvas.cpp > CMakeFiles\raytracer.dir\glCanvas.i
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Admin\Documents\mit\assignment3\glCanvas.cpp > CMakeFiles\raytracer.dir\glCanvas.i
 
 CMakeFiles/raytracer.dir/glCanvas.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/glCanvas.s"
-	D:\ProgramFiles\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\ComputerScience\Graphics\MIT\assignment3\glCanvas.cpp -o CMakeFiles\raytracer.dir\glCanvas.s
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Admin\Documents\mit\assignment3\glCanvas.cpp -o CMakeFiles\raytracer.dir\glCanvas.s
+
+CMakeFiles/raytracer.dir/group.obj: CMakeFiles/raytracer.dir/flags.make
+CMakeFiles/raytracer.dir/group.obj: CMakeFiles/raytracer.dir/includes_CXX.rsp
+CMakeFiles/raytracer.dir/group.obj: C:/Users/Admin/Documents/mit/assignment3/group.cpp
+CMakeFiles/raytracer.dir/group.obj: CMakeFiles/raytracer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Admin\Documents\mit\assignment3\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/raytracer.dir/group.obj"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/group.obj -MF CMakeFiles\raytracer.dir\group.obj.d -o CMakeFiles\raytracer.dir\group.obj -c C:\Users\Admin\Documents\mit\assignment3\group.cpp
+
+CMakeFiles/raytracer.dir/group.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/raytracer.dir/group.i"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Admin\Documents\mit\assignment3\group.cpp > CMakeFiles\raytracer.dir\group.i
+
+CMakeFiles/raytracer.dir/group.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/group.s"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Admin\Documents\mit\assignment3\group.cpp -o CMakeFiles\raytracer.dir\group.s
+
+CMakeFiles/raytracer.dir/image.obj: CMakeFiles/raytracer.dir/flags.make
+CMakeFiles/raytracer.dir/image.obj: CMakeFiles/raytracer.dir/includes_CXX.rsp
+CMakeFiles/raytracer.dir/image.obj: C:/Users/Admin/Documents/mit/assignment3/image.cpp
+CMakeFiles/raytracer.dir/image.obj: CMakeFiles/raytracer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Admin\Documents\mit\assignment3\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/raytracer.dir/image.obj"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/image.obj -MF CMakeFiles\raytracer.dir\image.obj.d -o CMakeFiles\raytracer.dir\image.obj -c C:\Users\Admin\Documents\mit\assignment3\image.cpp
+
+CMakeFiles/raytracer.dir/image.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/raytracer.dir/image.i"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Admin\Documents\mit\assignment3\image.cpp > CMakeFiles\raytracer.dir\image.i
+
+CMakeFiles/raytracer.dir/image.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/image.s"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Admin\Documents\mit\assignment3\image.cpp -o CMakeFiles\raytracer.dir\image.s
 
 CMakeFiles/raytracer.dir/light.obj: CMakeFiles/raytracer.dir/flags.make
 CMakeFiles/raytracer.dir/light.obj: CMakeFiles/raytracer.dir/includes_CXX.rsp
-CMakeFiles/raytracer.dir/light.obj: D:/ComputerScience/Graphics/MIT/assignment3/light.cpp
+CMakeFiles/raytracer.dir/light.obj: C:/Users/Admin/Documents/mit/assignment3/light.cpp
 CMakeFiles/raytracer.dir/light.obj: CMakeFiles/raytracer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\ComputerScience\Graphics\MIT\assignment3\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/raytracer.dir/light.obj"
-	D:\ProgramFiles\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/light.obj -MF CMakeFiles\raytracer.dir\light.obj.d -o CMakeFiles\raytracer.dir\light.obj -c D:\ComputerScience\Graphics\MIT\assignment3\light.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Admin\Documents\mit\assignment3\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/raytracer.dir/light.obj"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/light.obj -MF CMakeFiles\raytracer.dir\light.obj.d -o CMakeFiles\raytracer.dir\light.obj -c C:\Users\Admin\Documents\mit\assignment3\light.cpp
 
 CMakeFiles/raytracer.dir/light.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/raytracer.dir/light.i"
-	D:\ProgramFiles\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\ComputerScience\Graphics\MIT\assignment3\light.cpp > CMakeFiles\raytracer.dir\light.i
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Admin\Documents\mit\assignment3\light.cpp > CMakeFiles\raytracer.dir\light.i
 
 CMakeFiles/raytracer.dir/light.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/light.s"
-	D:\ProgramFiles\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\ComputerScience\Graphics\MIT\assignment3\light.cpp -o CMakeFiles\raytracer.dir\light.s
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Admin\Documents\mit\assignment3\light.cpp -o CMakeFiles\raytracer.dir\light.s
+
+CMakeFiles/raytracer.dir/main.obj: CMakeFiles/raytracer.dir/flags.make
+CMakeFiles/raytracer.dir/main.obj: CMakeFiles/raytracer.dir/includes_CXX.rsp
+CMakeFiles/raytracer.dir/main.obj: C:/Users/Admin/Documents/mit/assignment3/main.cpp
+CMakeFiles/raytracer.dir/main.obj: CMakeFiles/raytracer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Admin\Documents\mit\assignment3\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/raytracer.dir/main.obj"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/main.obj -MF CMakeFiles\raytracer.dir\main.obj.d -o CMakeFiles\raytracer.dir\main.obj -c C:\Users\Admin\Documents\mit\assignment3\main.cpp
+
+CMakeFiles/raytracer.dir/main.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/raytracer.dir/main.i"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Admin\Documents\mit\assignment3\main.cpp > CMakeFiles\raytracer.dir\main.i
+
+CMakeFiles/raytracer.dir/main.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/main.s"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Admin\Documents\mit\assignment3\main.cpp -o CMakeFiles\raytracer.dir\main.s
+
+CMakeFiles/raytracer.dir/material.obj: CMakeFiles/raytracer.dir/flags.make
+CMakeFiles/raytracer.dir/material.obj: CMakeFiles/raytracer.dir/includes_CXX.rsp
+CMakeFiles/raytracer.dir/material.obj: C:/Users/Admin/Documents/mit/assignment3/material.cpp
+CMakeFiles/raytracer.dir/material.obj: CMakeFiles/raytracer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Admin\Documents\mit\assignment3\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/raytracer.dir/material.obj"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/material.obj -MF CMakeFiles\raytracer.dir\material.obj.d -o CMakeFiles\raytracer.dir\material.obj -c C:\Users\Admin\Documents\mit\assignment3\material.cpp
+
+CMakeFiles/raytracer.dir/material.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/raytracer.dir/material.i"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Admin\Documents\mit\assignment3\material.cpp > CMakeFiles\raytracer.dir\material.i
+
+CMakeFiles/raytracer.dir/material.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/material.s"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Admin\Documents\mit\assignment3\material.cpp -o CMakeFiles\raytracer.dir\material.s
+
+CMakeFiles/raytracer.dir/matrix.obj: CMakeFiles/raytracer.dir/flags.make
+CMakeFiles/raytracer.dir/matrix.obj: CMakeFiles/raytracer.dir/includes_CXX.rsp
+CMakeFiles/raytracer.dir/matrix.obj: C:/Users/Admin/Documents/mit/assignment3/matrix.cpp
+CMakeFiles/raytracer.dir/matrix.obj: CMakeFiles/raytracer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Admin\Documents\mit\assignment3\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/raytracer.dir/matrix.obj"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/matrix.obj -MF CMakeFiles\raytracer.dir\matrix.obj.d -o CMakeFiles\raytracer.dir\matrix.obj -c C:\Users\Admin\Documents\mit\assignment3\matrix.cpp
+
+CMakeFiles/raytracer.dir/matrix.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/raytracer.dir/matrix.i"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Admin\Documents\mit\assignment3\matrix.cpp > CMakeFiles\raytracer.dir\matrix.i
+
+CMakeFiles/raytracer.dir/matrix.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/matrix.s"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Admin\Documents\mit\assignment3\matrix.cpp -o CMakeFiles\raytracer.dir\matrix.s
 
 CMakeFiles/raytracer.dir/scene_parser.obj: CMakeFiles/raytracer.dir/flags.make
 CMakeFiles/raytracer.dir/scene_parser.obj: CMakeFiles/raytracer.dir/includes_CXX.rsp
-CMakeFiles/raytracer.dir/scene_parser.obj: D:/ComputerScience/Graphics/MIT/assignment3/scene_parser.cpp
+CMakeFiles/raytracer.dir/scene_parser.obj: C:/Users/Admin/Documents/mit/assignment3/scene_parser.cpp
 CMakeFiles/raytracer.dir/scene_parser.obj: CMakeFiles/raytracer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\ComputerScience\Graphics\MIT\assignment3\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/raytracer.dir/scene_parser.obj"
-	D:\ProgramFiles\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/scene_parser.obj -MF CMakeFiles\raytracer.dir\scene_parser.obj.d -o CMakeFiles\raytracer.dir\scene_parser.obj -c D:\ComputerScience\Graphics\MIT\assignment3\scene_parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Admin\Documents\mit\assignment3\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/raytracer.dir/scene_parser.obj"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/scene_parser.obj -MF CMakeFiles\raytracer.dir\scene_parser.obj.d -o CMakeFiles\raytracer.dir\scene_parser.obj -c C:\Users\Admin\Documents\mit\assignment3\scene_parser.cpp
 
 CMakeFiles/raytracer.dir/scene_parser.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/raytracer.dir/scene_parser.i"
-	D:\ProgramFiles\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\ComputerScience\Graphics\MIT\assignment3\scene_parser.cpp > CMakeFiles\raytracer.dir\scene_parser.i
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Admin\Documents\mit\assignment3\scene_parser.cpp > CMakeFiles\raytracer.dir\scene_parser.i
 
 CMakeFiles/raytracer.dir/scene_parser.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/scene_parser.s"
-	D:\ProgramFiles\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\ComputerScience\Graphics\MIT\assignment3\scene_parser.cpp -o CMakeFiles\raytracer.dir\scene_parser.s
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Admin\Documents\mit\assignment3\scene_parser.cpp -o CMakeFiles\raytracer.dir\scene_parser.s
+
+CMakeFiles/raytracer.dir/sphere.obj: CMakeFiles/raytracer.dir/flags.make
+CMakeFiles/raytracer.dir/sphere.obj: CMakeFiles/raytracer.dir/includes_CXX.rsp
+CMakeFiles/raytracer.dir/sphere.obj: C:/Users/Admin/Documents/mit/assignment3/sphere.cpp
+CMakeFiles/raytracer.dir/sphere.obj: CMakeFiles/raytracer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Admin\Documents\mit\assignment3\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/raytracer.dir/sphere.obj"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/sphere.obj -MF CMakeFiles\raytracer.dir\sphere.obj.d -o CMakeFiles\raytracer.dir\sphere.obj -c C:\Users\Admin\Documents\mit\assignment3\sphere.cpp
+
+CMakeFiles/raytracer.dir/sphere.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/raytracer.dir/sphere.i"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Admin\Documents\mit\assignment3\sphere.cpp > CMakeFiles\raytracer.dir\sphere.i
+
+CMakeFiles/raytracer.dir/sphere.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/sphere.s"
+	C:\Users\Admin\Documents\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Admin\Documents\mit\assignment3\sphere.cpp -o CMakeFiles\raytracer.dir\sphere.s
 
 # Object files for target raytracer
 raytracer_OBJECTS = \
+"CMakeFiles/raytracer.dir/Plane.obj" \
+"CMakeFiles/raytracer.dir/Transform.obj" \
+"CMakeFiles/raytracer.dir/Triangle.obj" \
+"CMakeFiles/raytracer.dir/camera.obj" \
 "CMakeFiles/raytracer.dir/glCanvas.obj" \
+"CMakeFiles/raytracer.dir/group.obj" \
+"CMakeFiles/raytracer.dir/image.obj" \
 "CMakeFiles/raytracer.dir/light.obj" \
-"CMakeFiles/raytracer.dir/scene_parser.obj"
+"CMakeFiles/raytracer.dir/main.obj" \
+"CMakeFiles/raytracer.dir/material.obj" \
+"CMakeFiles/raytracer.dir/matrix.obj" \
+"CMakeFiles/raytracer.dir/scene_parser.obj" \
+"CMakeFiles/raytracer.dir/sphere.obj"
 
 # External object files for target raytracer
 raytracer_EXTERNAL_OBJECTS =
 
-D:/ComputerScience/Graphics/MIT/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/glCanvas.obj
-D:/ComputerScience/Graphics/MIT/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/light.obj
-D:/ComputerScience/Graphics/MIT/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/scene_parser.obj
-D:/ComputerScience/Graphics/MIT/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/build.make
-D:/ComputerScience/Graphics/MIT/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/linkLibs.rsp
-D:/ComputerScience/Graphics/MIT/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/objects1.rsp
-D:/ComputerScience/Graphics/MIT/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\ComputerScience\Graphics\MIT\assignment3\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable D:\ComputerScience\Graphics\MIT\assignment3\raytracer.exe"
+C:/Users/Admin/Documents/mit/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/Plane.obj
+C:/Users/Admin/Documents/mit/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/Transform.obj
+C:/Users/Admin/Documents/mit/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/Triangle.obj
+C:/Users/Admin/Documents/mit/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/camera.obj
+C:/Users/Admin/Documents/mit/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/glCanvas.obj
+C:/Users/Admin/Documents/mit/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/group.obj
+C:/Users/Admin/Documents/mit/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/image.obj
+C:/Users/Admin/Documents/mit/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/light.obj
+C:/Users/Admin/Documents/mit/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/main.obj
+C:/Users/Admin/Documents/mit/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/material.obj
+C:/Users/Admin/Documents/mit/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/matrix.obj
+C:/Users/Admin/Documents/mit/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/scene_parser.obj
+C:/Users/Admin/Documents/mit/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/sphere.obj
+C:/Users/Admin/Documents/mit/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/build.make
+C:/Users/Admin/Documents/mit/assignment3/raytracer.exe: C:/Users/Admin/Documents/mit/assignment3/lib/libfreeglut.lib
+C:/Users/Admin/Documents/mit/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/linkLibs.rsp
+C:/Users/Admin/Documents/mit/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/objects1.rsp
+C:/Users/Admin/Documents/mit/assignment3/raytracer.exe: CMakeFiles/raytracer.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Admin\Documents\mit\assignment3\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable C:\Users\Admin\Documents\mit\assignment3\raytracer.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\raytracer.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/raytracer.dir/build: D:/ComputerScience/Graphics/MIT/assignment3/raytracer.exe
+CMakeFiles/raytracer.dir/build: C:/Users/Admin/Documents/mit/assignment3/raytracer.exe
 .PHONY : CMakeFiles/raytracer.dir/build
 
 CMakeFiles/raytracer.dir/clean:
@@ -141,6 +312,6 @@ CMakeFiles/raytracer.dir/clean:
 .PHONY : CMakeFiles/raytracer.dir/clean
 
 CMakeFiles/raytracer.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\ComputerScience\Graphics\MIT\assignment3 D:\ComputerScience\Graphics\MIT\assignment3 D:\ComputerScience\Graphics\MIT\assignment3\build D:\ComputerScience\Graphics\MIT\assignment3\build D:\ComputerScience\Graphics\MIT\assignment3\build\CMakeFiles\raytracer.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Admin\Documents\mit\assignment3 C:\Users\Admin\Documents\mit\assignment3 C:\Users\Admin\Documents\mit\assignment3\build C:\Users\Admin\Documents\mit\assignment3\build C:\Users\Admin\Documents\mit\assignment3\build\CMakeFiles\raytracer.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/raytracer.dir/depend
 

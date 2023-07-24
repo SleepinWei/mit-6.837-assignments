@@ -1,0 +1,8 @@
+*.tar.gz
+*.zip
+*.pdf
+.vscode
+*/vs
+*.o
+*.exe
+*.pdb

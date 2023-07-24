@@ -1,0 +1,1 @@
+rm -f *~ *bak *.o  core.* Makefile.depend raytracer.exe 

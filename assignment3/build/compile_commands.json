@@ -1,0 +1,20 @@
+[
+{
+  "directory": "D:/ComputerScience/Graphics/MIT/assignment3/build",
+  "command": "D:\\ProgramFiles\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\glCanvas.obj -c D:\\ComputerScience\\Graphics\\MIT\\assignment3\\glCanvas.cpp",
+  "file": "D:/ComputerScience/Graphics/MIT/assignment3/glCanvas.cpp",
+  "output": "CMakeFiles/raytracer.dir/glCanvas.obj"
+},
+{
+  "directory": "D:/ComputerScience/Graphics/MIT/assignment3/build",
+  "command": "D:\\ProgramFiles\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\light.obj -c D:\\ComputerScience\\Graphics\\MIT\\assignment3\\light.cpp",
+  "file": "D:/ComputerScience/Graphics/MIT/assignment3/light.cpp",
+  "output": "CMakeFiles/raytracer.dir/light.obj"
+},
+{
+  "directory": "D:/ComputerScience/Graphics/MIT/assignment3/build",
+  "command": "D:\\ProgramFiles\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\scene_parser.obj -c D:\\ComputerScience\\Graphics\\MIT\\assignment3\\scene_parser.cpp",
+  "file": "D:/ComputerScience/Graphics/MIT/assignment3/scene_parser.cpp",
+  "output": "CMakeFiles/raytracer.dir/scene_parser.obj"
+}
+]

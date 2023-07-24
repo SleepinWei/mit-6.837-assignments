@@ -211,6 +211,7 @@ void PerspectiveCamera::truckCamera(float dx, float dy)
 
 void PerspectiveCamera::rotateCamera(float rx, float ry)
 {
+//   Vec3f _up(0.0f, 1.0f, 0.0f);
   Vec3f horizontal;
   Vec3f::Cross3(horizontal, direction, up);
   horizontal.Normalize();
@@ -234,10 +235,11 @@ void PerspectiveCamera::rotateCamera(float rx, float ry)
   // ASSIGNMENT 3: Fix any other affected values
   // ===========================================
 
-  rotMat.TransformDirection(up);
-  rotMat.TransformDirection(horizontal);
-  up.Normalize();
-  horizontal.Normalize();
+//   rotMat.TransformDirection(up);
+//   rotMat.TransformDirection(horizontal);
+//   up.Normalize();
+//   Vec3f::Cross3(horizontal, direction, up);
+//   horizontal.Normalize();
 }
 
 PerspectiveCamera::PerspectiveCamera(Vec3f& center, Vec3f& direction, Vec3f&up,float angle){
@@ -247,12 +249,13 @@ PerspectiveCamera::PerspectiveCamera(Vec3f& center, Vec3f& direction, Vec3f&up,f
     this->direction = direction;
 
     up.Normalize();
+    this->up = up; 
 
-    Vec3f::Cross3(this->horizontal, direction, up);
-    this->horizontal.Normalize();
+    // Vec3f::Cross3(this->horizontal, direction, up);
+    // this->horizontal.Normalize();
 
-    Vec3f::Cross3(this->up, this->horizontal, direction);
-    this->up.Normalize();
+    // Vec3f::Cross3(this->up, this->horizontal, direction);
+    // this->up.Normalize();
 
     this->angle = angle;
 }
@@ -262,14 +265,23 @@ float PerspectiveCamera::getTMin() const{
 }
 
 Ray PerspectiveCamera::generateRay(Vec2f point){
+    Vec3f horizontal;
+    Vec3f::Cross3(horizontal, direction, up);
+    horizontal.Normalize();
+
+    Vec3f _up;
+    Vec3f::Cross3(_up, horizontal, direction);
+    _up.Normalize();
+
     point *= 2.0f;
     point -= {1.0f,1.0f}; // -1 ~ 1
 
-    float tan_half_angle = tanf(0.5f * this->angle);
+    // float tan_half_angle = tanf(0.5f * this->angle);
+    point *= 0.5 * this->angle;
 
     Vec3f ray_dir = this->direction;
-    ray_dir += up * tan_half_angle * point.y();
-    ray_dir += horizontal * tan_half_angle * point.x();
+    ray_dir += _up * tanf(point.y());
+    ray_dir += horizontal * tanf(point.x());
 
     ray_dir.Normalize(); // normalization
 

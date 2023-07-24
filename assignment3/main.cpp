@@ -38,9 +38,9 @@ void renderFunction(){
 
 	int numlight = p_parser->getNumLights();
 
-	for (int i = 0; i < h;i++){
+	for (int i = 0; i < height;i++){
         for (int j = 0; j < w;j++){
-            Vec2f coordinate(j * 1.0f / w, i * 1.0f / h);
+            Vec2f coordinate(j * 1.0f / w, i * 1.0f / height);
             Hit h;
 			h.set(1e6, nullptr, {}, {});
 

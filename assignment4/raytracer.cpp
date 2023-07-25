@@ -18,19 +18,29 @@ bool partial_ge(const Vec3f& v1, const Vec3f& v2){
 bool transmittedDirection(const Vec3f &normal, const Vec3f &incoming, 
                             float index_i, float index_t, Vec3f &transmitted){
 
-    Vec3f N = normal;
-    float eta_r = index_i / index_t;
-    Vec3f I = (-1) * incoming;
-    I.Normalize();
-    float temp = 1 - eta_r * eta_r * (1 - N.Dot3(I) * N.Dot3(I));
-    if (temp < 0) {     /* internal reflection */
-        transmitted = incoming - 2 * incoming.Dot3(N) * N;
-        transmitted.Normalize();
-        return true;
-    }
-    transmitted = (eta_r * N.Dot3(I) - sqrt(temp)) * N - eta_r * I;
+    // Vec3f N = normal;
+    // float eta_r = index_i / index_t;
+    // Vec3f I = (-1) * incoming;
+    // I.Normalize();
+    // float temp = 1 - eta_r * eta_r * (1 - N.Dot3(I) * N.Dot3(I));
+    // if (temp < 0) {     /* internal reflection */
+    //     transmitted = incoming - 2 * incoming.Dot3(N) * N;
+    //     transmitted.Normalize();
+    //     return true;
+    // }
+    // transmitted = (eta_r * N.Dot3(I) - sqrt(temp)) * N - eta_r * I;
+    // transmitted.Normalize();
+    // return false;
+    auto revI = incoming;
+    revI.Negate();
+    float index_r = index_i / index_t;
+    float nDotI = normal.Dot3(revI);
+    float inSqrt = 1 - index_r * index_r * (1 - nDotI * nDotI);
+    if (inSqrt < 0) return false;
+    float coN = index_r * nDotI - sqrt(inSqrt), coI = -index_r;
+    transmitted = coN * normal + coI * revI;
     transmitted.Normalize();
-    return false;
+    return true;
 }
 
 Vec3f mirrorDirection(const Vec3f &normal, const Vec3f &incoming){
@@ -124,13 +134,15 @@ Vec3f RayTracer::traceRay(Ray &ray, float tmin, int bounces, float weight,
         if(isInside){
             std::swap(ior_i, ior_r);
         }
-        transmittedDirection(hit.getNormal(), ray.getDirection(), ior_i, ior_r, refracted_dir);
-        Ray refract_ray(hit.getIntersectionPoint() + refracted_dir * 1e-4, refracted_dir);
+        bool hasRefraction = transmittedDirection(hit.getNormal(), ray.getDirection(), ior_i, ior_r, refracted_dir);
+        if(hasRefraction){
+            Ray refract_ray(hit.getIntersectionPoint() + refracted_dir * 1e-4, refracted_dir);
 
-        Hit newHit(INFINITY,nullptr,{});
-        Vec3f refract_color = traceRay(refract_ray, tmin, bounces + 1, weight * mat->getTransparentColor().Length(), 
-            mat->getIOR(), newHit);
-        Color += refract_color * hit.getMaterial()->getTransparentColor();
+            Hit newHit(INFINITY,nullptr,{});
+            Vec3f refract_color = traceRay(refract_ray, tmin, bounces + 1, weight * mat->getTransparentColor().Length(), 
+                mat->getIOR(), newHit);
+            Color += refract_color * hit.getMaterial()->getTransparentColor();
+        }
     }
 
     return Color; 

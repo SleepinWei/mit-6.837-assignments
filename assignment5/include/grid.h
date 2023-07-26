@@ -29,7 +29,7 @@ public:
 
 class Grid: public Object3D{
 public:
-    vector<vector<vector<bool>>> arr;
+    vector<vector<vector<vector<Object3D*>>>> arr;
     int nx, ny, nz; 
 
 public:

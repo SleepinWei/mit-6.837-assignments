@@ -141,7 +141,7 @@ void Sphere::insertIntoGrid(Grid *g, Matrix *m){
                 float half_len = 0.5f * sqrtf(size.Dot3(size));
 
                 if((pos_center - center).Length() - half_len <= radius){
-                    g->arr[i][j][k] = true; 
+                    g->arr[i][j][k].push_back(this); 
                 }
             }
         }

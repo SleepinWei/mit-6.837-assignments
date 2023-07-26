@@ -43,6 +43,8 @@ public:
 
   virtual Vec3f getTransparentColor() { return {}; }
 
+  virtual Vec3f setDiffuseColor(Vec3f color) { diffuseColor = color; }
+
 protected:
 
   // REPRESENTATION

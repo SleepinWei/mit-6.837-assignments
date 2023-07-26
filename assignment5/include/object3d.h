@@ -26,6 +26,8 @@ public:
 
     virtual void insertIntoGrid(Grid *g, Matrix *m){}
 
+    virtual void generateBoundingBox() {}; // for "group"
+
     BoundingBox *getBoundingBox() { return bb; }
 
 public:

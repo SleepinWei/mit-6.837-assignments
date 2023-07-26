@@ -8,8 +8,8 @@
 #include "ray.h"
 
 Grid::Grid(BoundingBox *bb, int nx, int ny, int nz)
+    : arr(nx, vector<vector<vector<Object3D *>>>(ny, vector<vector<Object3D *>>(nz, vector<Object3D *>(0, nullptr))))
 {
-    arr = vector<vector<vector<bool>>>(nx, vector<vector<bool>>(ny, vector<bool>(nz)));
     this->bb = bb;
     this->nx = nx;
     this->ny = ny;
@@ -32,7 +32,7 @@ Grid::~Grid()
     }
 }
 
-void renderCube(Vec3f pos_min, Vec3f pos_max)
+void renderCube(Vec3f pos_min, Vec3f pos_max, Vec3f color)
 {
     Vec3f size = pos_max - pos_min;
     Vec3f pos0 = pos_min;
@@ -45,8 +45,8 @@ void renderCube(Vec3f pos_min, Vec3f pos_max)
     Vec3f pos7 = pos_min + Vec3f(0, size.y(), size.z());
 
     Vec4f diffuse{1, 1, 1, 1};
-    glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, (float *)&diffuse);
-    glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, (float *)&diffuse);
+    glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, (float *)&color);
+    glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, (float *)&color);
 
     glBegin(GL_QUADS);
     glNormal3f(0, -1, 0);
@@ -88,6 +88,13 @@ void renderCube(Vec3f pos_min, Vec3f pos_max)
     glEnd();
 }
 
+Vec3f mapNumToColor(int num)
+{
+    Vec3f color(1.0f, 1.0f, 1.0f);
+    color = color * (1.0f - num / 25.0f * 0.8f);
+    return color;
+}
+
 void Grid::paint()
 {
 
@@ -102,13 +109,14 @@ void Grid::paint()
         {
             for (int k = 0; k < nz; k++)
             {
-                if (arr[i][j][k])
+                int num = arr[i][j][k].size();
+                if (num)
                 {
                     Vec3f pos;
                     Vec3f::Mult(pos, size, {i, j, k});
                     pos += min_pos;
 
-                    renderCube(pos, pos + size);
+                    renderCube(pos, pos + size, mapNumToColor(num));
                 }
             }
         }
@@ -128,10 +136,13 @@ bool Grid::intersect(const Ray &r, Hit &h, float tmin)
     }
     while (info.i >= 0 && info.i < nx && info.j >= 0 && info.j < ny && info.k >= 0 && info.k < nz)
     {
-
-        if (arr[info.i][info.j][info.k])
+        int num = arr[info.i][info.j][info.k].size();
+        if (num)
         {
             // std::cout << info.i << ' ' << info.j << ' ' << info.k << '\n';
+
+            this->mat->setDiffuseColor(mapNumToColor(num));
+
             h.set(info.tmin, this->mat, info.normal, r);
             return true;
         }
@@ -274,8 +285,8 @@ void Grid::initializeRayMarch(MarchingInfo &mi, const Ray &r, float tmin) const
             mi.tmin = t;
             float i = grid_pos.x(), j = grid_pos.y(), k = grid_pos.z();
             // cout << i << ' ' << j << ' ' << k << '\n';
-            // mi.i = fabs(round(i) - i) < 1e-6 ? round(i): i; 
-            // mi.j =  fabs(round(j) - j) < 1e-6 ? round(j): j; 
+            // mi.i = fabs(round(i) - i) < 1e-6 ? round(i): i;
+            // mi.j =  fabs(round(j) - j) < 1e-6 ? round(j): j;
             // mi.k =  fabs(round(k) - k) < 1e-6 ? round(k): k;
             mi.i = i, mi.j = j, mi.k = k;
 
@@ -316,15 +327,18 @@ void Grid::initializeRayMarch(MarchingInfo &mi, const Ray &r, float tmin) const
             if (mi.k == nz)
                 mi.k -= 1;
 
-            int nexti = mi.i , nextj = mi.j, nextk = mi.k; 
-            if(mi.sign_x > 0){
-                nexti += 1; 
+            int nexti = mi.i, nextj = mi.j, nextk = mi.k;
+            if (mi.sign_x > 0)
+            {
+                nexti += 1;
             }
-            if (mi.sign_y > 0){
+            if (mi.sign_y > 0)
+            {
                 nextj += 1;
             }
-            if(mi.sign_z>0){
-                nextk += 1; 
+            if (mi.sign_z > 0)
+            {
+                nextk += 1;
             }
 
             Vec3f next_grid_delta = Vec3f{nexti, nextj, nextk} * size + pos_min - r.getOrigin();

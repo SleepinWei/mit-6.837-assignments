@@ -1,3 +1,3 @@
-C:/Users/Admin/Documents/mit/assignment5/build/CMakeFiles/raytracer.dir
-C:/Users/Admin/Documents/mit/assignment5/build/CMakeFiles/edit_cache.dir
-C:/Users/Admin/Documents/mit/assignment5/build/CMakeFiles/rebuild_cache.dir
+D:/ComputerScience/Graphics/MIT/assignment5/build/CMakeFiles/raytracer.dir
+D:/ComputerScience/Graphics/MIT/assignment5/build/CMakeFiles/edit_cache.dir
+D:/ComputerScience/Graphics/MIT/assignment5/build/CMakeFiles/rebuild_cache.dir

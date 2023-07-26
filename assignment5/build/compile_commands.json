@@ -1,104 +1,104 @@
 [
 {
-  "directory": "D:/ComputerScience/Graphics/MIT/assignment5/build",
-  "command": "D:\\ProgramFiles\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\Plane.obj -c D:\\ComputerScience\\Graphics\\MIT\\assignment5\\Plane.cpp",
-  "file": "D:/ComputerScience/Graphics/MIT/assignment5/Plane.cpp",
+  "directory": "C:/Users/Admin/Documents/mit/assignment5/build",
+  "command": "C:\\Users\\Admin\\Documents\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\Plane.obj -c C:\\Users\\Admin\\Documents\\mit\\assignment5\\Plane.cpp",
+  "file": "C:/Users/Admin/Documents/mit/assignment5/Plane.cpp",
   "output": "CMakeFiles/raytracer.dir/Plane.obj"
 },
 {
-  "directory": "D:/ComputerScience/Graphics/MIT/assignment5/build",
-  "command": "D:\\ProgramFiles\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\Transform.obj -c D:\\ComputerScience\\Graphics\\MIT\\assignment5\\Transform.cpp",
-  "file": "D:/ComputerScience/Graphics/MIT/assignment5/Transform.cpp",
+  "directory": "C:/Users/Admin/Documents/mit/assignment5/build",
+  "command": "C:\\Users\\Admin\\Documents\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\Transform.obj -c C:\\Users\\Admin\\Documents\\mit\\assignment5\\Transform.cpp",
+  "file": "C:/Users/Admin/Documents/mit/assignment5/Transform.cpp",
   "output": "CMakeFiles/raytracer.dir/Transform.obj"
 },
 {
-  "directory": "D:/ComputerScience/Graphics/MIT/assignment5/build",
-  "command": "D:\\ProgramFiles\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\Triangle.obj -c D:\\ComputerScience\\Graphics\\MIT\\assignment5\\Triangle.cpp",
-  "file": "D:/ComputerScience/Graphics/MIT/assignment5/Triangle.cpp",
+  "directory": "C:/Users/Admin/Documents/mit/assignment5/build",
+  "command": "C:\\Users\\Admin\\Documents\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\Triangle.obj -c C:\\Users\\Admin\\Documents\\mit\\assignment5\\Triangle.cpp",
+  "file": "C:/Users/Admin/Documents/mit/assignment5/Triangle.cpp",
   "output": "CMakeFiles/raytracer.dir/Triangle.obj"
 },
 {
-  "directory": "D:/ComputerScience/Graphics/MIT/assignment5/build",
-  "command": "D:\\ProgramFiles\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\boundingbox.obj -c D:\\ComputerScience\\Graphics\\MIT\\assignment5\\boundingbox.cpp",
-  "file": "D:/ComputerScience/Graphics/MIT/assignment5/boundingbox.cpp",
+  "directory": "C:/Users/Admin/Documents/mit/assignment5/build",
+  "command": "C:\\Users\\Admin\\Documents\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\boundingbox.obj -c C:\\Users\\Admin\\Documents\\mit\\assignment5\\boundingbox.cpp",
+  "file": "C:/Users/Admin/Documents/mit/assignment5/boundingbox.cpp",
   "output": "CMakeFiles/raytracer.dir/boundingbox.obj"
 },
 {
-  "directory": "D:/ComputerScience/Graphics/MIT/assignment5/build",
-  "command": "D:\\ProgramFiles\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\camera.obj -c D:\\ComputerScience\\Graphics\\MIT\\assignment5\\camera.cpp",
-  "file": "D:/ComputerScience/Graphics/MIT/assignment5/camera.cpp",
+  "directory": "C:/Users/Admin/Documents/mit/assignment5/build",
+  "command": "C:\\Users\\Admin\\Documents\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\camera.obj -c C:\\Users\\Admin\\Documents\\mit\\assignment5\\camera.cpp",
+  "file": "C:/Users/Admin/Documents/mit/assignment5/camera.cpp",
   "output": "CMakeFiles/raytracer.dir/camera.obj"
 },
 {
-  "directory": "D:/ComputerScience/Graphics/MIT/assignment5/build",
-  "command": "D:\\ProgramFiles\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\glCanvas.obj -c D:\\ComputerScience\\Graphics\\MIT\\assignment5\\glCanvas.cpp",
-  "file": "D:/ComputerScience/Graphics/MIT/assignment5/glCanvas.cpp",
+  "directory": "C:/Users/Admin/Documents/mit/assignment5/build",
+  "command": "C:\\Users\\Admin\\Documents\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\glCanvas.obj -c C:\\Users\\Admin\\Documents\\mit\\assignment5\\glCanvas.cpp",
+  "file": "C:/Users/Admin/Documents/mit/assignment5/glCanvas.cpp",
   "output": "CMakeFiles/raytracer.dir/glCanvas.obj"
 },
 {
-  "directory": "D:/ComputerScience/Graphics/MIT/assignment5/build",
-  "command": "D:\\ProgramFiles\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\group.obj -c D:\\ComputerScience\\Graphics\\MIT\\assignment5\\group.cpp",
-  "file": "D:/ComputerScience/Graphics/MIT/assignment5/group.cpp",
+  "directory": "C:/Users/Admin/Documents/mit/assignment5/build",
+  "command": "C:\\Users\\Admin\\Documents\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\group.obj -c C:\\Users\\Admin\\Documents\\mit\\assignment5\\group.cpp",
+  "file": "C:/Users/Admin/Documents/mit/assignment5/group.cpp",
   "output": "CMakeFiles/raytracer.dir/group.obj"
 },
 {
-  "directory": "D:/ComputerScience/Graphics/MIT/assignment5/build",
-  "command": "D:\\ProgramFiles\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\image.obj -c D:\\ComputerScience\\Graphics\\MIT\\assignment5\\image.cpp",
-  "file": "D:/ComputerScience/Graphics/MIT/assignment5/image.cpp",
+  "directory": "C:/Users/Admin/Documents/mit/assignment5/build",
+  "command": "C:\\Users\\Admin\\Documents\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\image.obj -c C:\\Users\\Admin\\Documents\\mit\\assignment5\\image.cpp",
+  "file": "C:/Users/Admin/Documents/mit/assignment5/image.cpp",
   "output": "CMakeFiles/raytracer.dir/image.obj"
 },
 {
-  "directory": "D:/ComputerScience/Graphics/MIT/assignment5/build",
-  "command": "D:\\ProgramFiles\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\light.obj -c D:\\ComputerScience\\Graphics\\MIT\\assignment5\\light.cpp",
-  "file": "D:/ComputerScience/Graphics/MIT/assignment5/light.cpp",
+  "directory": "C:/Users/Admin/Documents/mit/assignment5/build",
+  "command": "C:\\Users\\Admin\\Documents\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\light.obj -c C:\\Users\\Admin\\Documents\\mit\\assignment5\\light.cpp",
+  "file": "C:/Users/Admin/Documents/mit/assignment5/light.cpp",
   "output": "CMakeFiles/raytracer.dir/light.obj"
 },
 {
-  "directory": "D:/ComputerScience/Graphics/MIT/assignment5/build",
-  "command": "D:\\ProgramFiles\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\main.obj -c D:\\ComputerScience\\Graphics\\MIT\\assignment5\\main.cpp",
-  "file": "D:/ComputerScience/Graphics/MIT/assignment5/main.cpp",
+  "directory": "C:/Users/Admin/Documents/mit/assignment5/build",
+  "command": "C:\\Users\\Admin\\Documents\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\main.obj -c C:\\Users\\Admin\\Documents\\mit\\assignment5\\main.cpp",
+  "file": "C:/Users/Admin/Documents/mit/assignment5/main.cpp",
   "output": "CMakeFiles/raytracer.dir/main.obj"
 },
 {
-  "directory": "D:/ComputerScience/Graphics/MIT/assignment5/build",
-  "command": "D:\\ProgramFiles\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\material.obj -c D:\\ComputerScience\\Graphics\\MIT\\assignment5\\material.cpp",
-  "file": "D:/ComputerScience/Graphics/MIT/assignment5/material.cpp",
+  "directory": "C:/Users/Admin/Documents/mit/assignment5/build",
+  "command": "C:\\Users\\Admin\\Documents\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\material.obj -c C:\\Users\\Admin\\Documents\\mit\\assignment5\\material.cpp",
+  "file": "C:/Users/Admin/Documents/mit/assignment5/material.cpp",
   "output": "CMakeFiles/raytracer.dir/material.obj"
 },
 {
-  "directory": "D:/ComputerScience/Graphics/MIT/assignment5/build",
-  "command": "D:\\ProgramFiles\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\matrix.obj -c D:\\ComputerScience\\Graphics\\MIT\\assignment5\\matrix.cpp",
-  "file": "D:/ComputerScience/Graphics/MIT/assignment5/matrix.cpp",
+  "directory": "C:/Users/Admin/Documents/mit/assignment5/build",
+  "command": "C:\\Users\\Admin\\Documents\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\matrix.obj -c C:\\Users\\Admin\\Documents\\mit\\assignment5\\matrix.cpp",
+  "file": "C:/Users/Admin/Documents/mit/assignment5/matrix.cpp",
   "output": "CMakeFiles/raytracer.dir/matrix.obj"
 },
 {
-  "directory": "D:/ComputerScience/Graphics/MIT/assignment5/build",
-  "command": "D:\\ProgramFiles\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\object3d.obj -c D:\\ComputerScience\\Graphics\\MIT\\assignment5\\object3d.cpp",
-  "file": "D:/ComputerScience/Graphics/MIT/assignment5/object3d.cpp",
+  "directory": "C:/Users/Admin/Documents/mit/assignment5/build",
+  "command": "C:\\Users\\Admin\\Documents\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\object3d.obj -c C:\\Users\\Admin\\Documents\\mit\\assignment5\\object3d.cpp",
+  "file": "C:/Users/Admin/Documents/mit/assignment5/object3d.cpp",
   "output": "CMakeFiles/raytracer.dir/object3d.obj"
 },
 {
-  "directory": "D:/ComputerScience/Graphics/MIT/assignment5/build",
-  "command": "D:\\ProgramFiles\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\rayTree.obj -c D:\\ComputerScience\\Graphics\\MIT\\assignment5\\rayTree.cpp",
-  "file": "D:/ComputerScience/Graphics/MIT/assignment5/rayTree.cpp",
+  "directory": "C:/Users/Admin/Documents/mit/assignment5/build",
+  "command": "C:\\Users\\Admin\\Documents\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\rayTree.obj -c C:\\Users\\Admin\\Documents\\mit\\assignment5\\rayTree.cpp",
+  "file": "C:/Users/Admin/Documents/mit/assignment5/rayTree.cpp",
   "output": "CMakeFiles/raytracer.dir/rayTree.obj"
 },
 {
-  "directory": "D:/ComputerScience/Graphics/MIT/assignment5/build",
-  "command": "D:\\ProgramFiles\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\raytracer.obj -c D:\\ComputerScience\\Graphics\\MIT\\assignment5\\raytracer.cpp",
-  "file": "D:/ComputerScience/Graphics/MIT/assignment5/raytracer.cpp",
+  "directory": "C:/Users/Admin/Documents/mit/assignment5/build",
+  "command": "C:\\Users\\Admin\\Documents\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\raytracer.obj -c C:\\Users\\Admin\\Documents\\mit\\assignment5\\raytracer.cpp",
+  "file": "C:/Users/Admin/Documents/mit/assignment5/raytracer.cpp",
   "output": "CMakeFiles/raytracer.dir/raytracer.obj"
 },
 {
-  "directory": "D:/ComputerScience/Graphics/MIT/assignment5/build",
-  "command": "D:\\ProgramFiles\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\scene_parser.obj -c D:\\ComputerScience\\Graphics\\MIT\\assignment5\\scene_parser.cpp",
-  "file": "D:/ComputerScience/Graphics/MIT/assignment5/scene_parser.cpp",
+  "directory": "C:/Users/Admin/Documents/mit/assignment5/build",
+  "command": "C:\\Users\\Admin\\Documents\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\scene_parser.obj -c C:\\Users\\Admin\\Documents\\mit\\assignment5\\scene_parser.cpp",
+  "file": "C:/Users/Admin/Documents/mit/assignment5/scene_parser.cpp",
   "output": "CMakeFiles/raytracer.dir/scene_parser.obj"
 },
 {
-  "directory": "D:/ComputerScience/Graphics/MIT/assignment5/build",
-  "command": "D:\\ProgramFiles\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\sphere.obj -c D:\\ComputerScience\\Graphics\\MIT\\assignment5\\sphere.cpp",
-  "file": "D:/ComputerScience/Graphics/MIT/assignment5/sphere.cpp",
+  "directory": "C:/Users/Admin/Documents/mit/assignment5/build",
+  "command": "C:\\Users\\Admin\\Documents\\mingw64\\bin\\g++.exe  @CMakeFiles/raytracer.dir/includes_CXX.rsp -g -o CMakeFiles\\raytracer.dir\\sphere.obj -c C:\\Users\\Admin\\Documents\\mit\\assignment5\\sphere.cpp",
+  "file": "C:/Users/Admin/Documents/mit/assignment5/sphere.cpp",
   "output": "CMakeFiles/raytracer.dir/sphere.obj"
 }
 ]

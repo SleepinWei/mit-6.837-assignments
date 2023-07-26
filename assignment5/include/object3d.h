@@ -12,7 +12,8 @@ class Matrix;
 class Object3D{
 public:
     Object3D(){
-        mat = nullptr; 
+        mat = nullptr;
+        bb = nullptr;
     }
 
     virtual ~Object3D(){

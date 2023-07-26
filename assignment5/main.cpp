@@ -64,12 +64,17 @@ void renderFunction()
 			Vec3f Color = p_tracer->traceRay(r, 0.0f, 0, 1.0f, 1.0f, h);
 
 			image.SetPixel(j, i, Color);
+
+			// debug
+			// image.SaveTGA(output_file);
 		}
 	}
-
-	char out_prefix[100] = "./result/";
-	image.SaveTGA(strcat(out_prefix, output_file));
-	char out_depth_prefix[100] = "./result/";
+	if (output_file)
+	{
+		char out_prefix[100] = "./result/";
+		image.SaveTGA(strcat(out_prefix, output_file));
+		char out_depth_prefix[100] = "./result/";
+	}
 }
 
 void traceRayFunction(float x, float y)
@@ -187,8 +192,10 @@ int main(int argc, char **argv)
 		}
 	}
 
-	assert(input_file != nullptr && output_file != nullptr && (enable_depth == false || depth_file != nullptr) && (enable_normal == false || normals_file != nullptr));
-
+	if (!input_file)
+	{
+		return 0;
+	}
 	char prefix[100] = "./scene/";
 	SceneParser parser(strcat(prefix, input_file));
 	p_parser = &parser;

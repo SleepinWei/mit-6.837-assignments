@@ -81,7 +81,8 @@ RayTracer::~RayTracer(){
 }
 
 extern bool shade_back;
-extern bool shadows; 
+extern bool shadows;
+extern bool visualize_grid;
 
 Vec3f RayTracer::traceRay(Ray &ray, float tmin, int bounces, float weight, 
                  float indexOfRefraction, Hit &hit) const
@@ -92,7 +93,13 @@ Vec3f RayTracer::traceRay(Ray &ray, float tmin, int bounces, float weight,
 
     auto group = parser->getGroup();
     auto camera = parser->getCamera();
-    bool group_intersect = group->intersect(ray, hit, tmin);
+    bool group_intersect = false;
+    if(visualize_grid){
+        group_intersect = grid->intersect(ray, hit, tmin);
+    }
+    else {
+        group_intersect = group->intersect(ray, hit, tmin);
+    }
     if(!group_intersect){
         return parser->getBackgroundColor();
     }

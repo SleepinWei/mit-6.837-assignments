@@ -34,7 +34,9 @@ void Group::paint(){
 
 void Group::insertIntoGrid(Grid *g, Matrix *m){
     for(auto inst : instances){
-        inst->insertIntoGrid(g, m);
+        if(inst->getBoundingBox()!=nullptr){
+            inst->insertIntoGrid(g, m);
+        }
     }
 }
 
@@ -46,9 +48,10 @@ void Group::generateBoundingBox(){
     {
         auto inst = instances[i];
         auto bounding_box = inst->getBoundingBox();
-
-        Vec3f::Min(pos_min, pos_min, bounding_box->getMin());
-        Vec3f::Max(pos_max, pos_max, bounding_box->getMax());
+        if(bounding_box){
+            Vec3f::Min(pos_min, pos_min, bounding_box->getMin());
+            Vec3f::Max(pos_max, pos_max, bounding_box->getMax());
+        }
     }
 
     bb = new BoundingBox(pos_min,pos_max);

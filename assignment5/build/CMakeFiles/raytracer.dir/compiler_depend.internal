@@ -354,13 +354,69 @@ CMakeFiles/raytracer.dir/Plane.obj
 
 CMakeFiles/raytracer.dir/Transform.obj
  D:/ComputerScience/Graphics/MIT/assignment5/Transform.cpp
- D:/ComputerScience/Graphics/MIT/assignment5/include/hit.h
- D:/ComputerScience/Graphics/MIT/assignment5/include/vectors.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/iostream
+ D:/ComputerScience/Graphics/MIT/assignment5/include/Transform.h
+ D:/ComputerScience/Graphics/MIT/assignment5/include/matrix.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/math.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/cmath
  D:/ProgramFiles/mingw64/include/c++/12.2.0/x86_64-w64-mingw32/bits/c++config.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/x86_64-w64-mingw32/bits/os_defines.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/x86_64-w64-mingw32/bits/cpu_defines.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/pstl/pstl_config.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/cpp_type_traits.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/ext/type_traits.h
+ D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/math.h
+ D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/crtdefs.h
+ D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/corecrt.h
+ D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/_mingw.h
+ D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h
+ D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h
+ D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/vadefs.h
+ D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/std_abs.h
+ D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/stdlib.h
+ D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h
+ D:/ProgramFiles/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed/limits.h
+ D:/ProgramFiles/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed/syslimits.h
+ D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/limits.h
+ D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/stdlib.h
+ D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/malloc.h
+ D:/ProgramFiles/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/mm_malloc.h
+ D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/errno.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/specfun.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/stl_algobase.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/functexcept.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/exception_defines.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/ext/numeric_traits.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/stl_pair.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/type_traits
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/move.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/utility.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/stl_iterator_base_types.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/stl_iterator_base_funcs.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/concept_check.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/debug/assertions.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/stl_iterator.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/ptr_traits.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/debug/debug.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/predefined_ops.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/limits
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/gamma.tcc
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/special_function_util.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/bessel_function.tcc
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/beta_function.tcc
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/ell_integral.tcc
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/exp_integral.tcc
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/hypergeometric.tcc
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/legendre_function.tcc
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/modified_bessel_func.tcc
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/poly_hermite.tcc
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/poly_laguerre.tcc
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/riemann_zeta.tcc
+ D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/assert.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/cstdlib
+ D:/ComputerScience/Graphics/MIT/assignment5/include/vectors.h
+ D:/ProgramFiles/mingw64/include/c++/12.2.0/iostream
  D:/ProgramFiles/mingw64/include/c++/12.2.0/ostream
  D:/ProgramFiles/mingw64/include/c++/12.2.0/ios
  D:/ProgramFiles/mingw64/include/c++/12.2.0/iosfwd
@@ -369,14 +425,7 @@ CMakeFiles/raytracer.dir/Transform.obj
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/postypes.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/cwchar
  D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/wchar.h
- D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/corecrt.h
- D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/_mingw.h
- D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h
- D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h
- D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/vadefs.h
- D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h
  D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h
- D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h
  D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h
  D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h
  D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/swprintf.inl
@@ -384,16 +433,12 @@ CMakeFiles/raytracer.dir/Transform.obj
  D:/ProgramFiles/mingw64/include/c++/12.2.0/exception
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/exception.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/exception_ptr.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/exception_defines.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/cxxabi_init_exception.h
  D:/ProgramFiles/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/stddef.h
  D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/stddef.h
- D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/crtdefs.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/typeinfo
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/hash_bytes.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/new
- D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/move.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/type_traits
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/nested_exception.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/char_traits.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/cstdint
@@ -412,13 +457,9 @@ CMakeFiles/raytracer.dir/Transform.obj
  D:/ProgramFiles/mingw64/include/c++/12.2.0/x86_64-w64-mingw32/bits/gthr.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/x86_64-w64-mingw32/bits/gthr-default.h
  D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/pthread.h
- D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/errno.h
  D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/sys/types.h
  D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/process.h
  D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/corecrt_startup.h
- D:/ProgramFiles/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed/limits.h
- D:/ProgramFiles/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed/syslimits.h
- D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/limits.h
  D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/signal.h
  D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/pthread_signal.h
  D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/time.h
@@ -434,25 +475,10 @@ CMakeFiles/raytracer.dir/Transform.obj
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/allocator.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/x86_64-w64-mingw32/bits/c++allocator.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/new_allocator.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/functexcept.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/cpp_type_traits.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/ostream_insert.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/cxxabi_forced.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/stl_iterator_base_types.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/stl_iterator_base_funcs.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/concept_check.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/debug/assertions.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/stl_iterator.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/ext/type_traits.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/ptr_traits.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/stl_function.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/backward/binders.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/ext/numeric_traits.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/stl_algobase.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/stl_pair.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/utility.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/debug/debug.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/predefined_ops.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/refwrap.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/invoke.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/range_access.h
@@ -465,13 +491,6 @@ CMakeFiles/raytracer.dir/Transform.obj
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/functional_hash.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/string_view.tcc
  D:/ProgramFiles/mingw64/include/c++/12.2.0/ext/string_conversions.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/cstdlib
- D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/stdlib.h
- D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/stdlib.h
- D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/malloc.h
- D:/ProgramFiles/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/mm_malloc.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/std_abs.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/cstdio
  D:/ProgramFiles/mingw64/include/c++/12.2.0/cerrno
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/charconv.h
@@ -494,36 +513,19 @@ CMakeFiles/raytracer.dir/Transform.obj
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/ostream.tcc
  D:/ProgramFiles/mingw64/include/c++/12.2.0/istream
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/istream.tcc
- D:/ProgramFiles/mingw64/include/c++/12.2.0/math.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/cmath
- D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/math.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/specfun.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/limits
- D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/gamma.tcc
- D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/special_function_util.h
- D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/bessel_function.tcc
- D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/beta_function.tcc
- D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/ell_integral.tcc
- D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/exp_integral.tcc
- D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/hypergeometric.tcc
- D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/legendre_function.tcc
- D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/modified_bessel_func.tcc
- D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/poly_hermite.tcc
- D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/poly_laguerre.tcc
- D:/ProgramFiles/mingw64/include/c++/12.2.0/tr1/riemann_zeta.tcc
- D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/assert.h
- D:/ComputerScience/Graphics/MIT/assignment5/include/ray.h
- D:/ComputerScience/Graphics/MIT/assignment5/include/ray.h
- D:/ComputerScience/Graphics/MIT/assignment5/include/Transform.h
- D:/ComputerScience/Graphics/MIT/assignment5/include/matrix.h
  D:/ComputerScience/Graphics/MIT/assignment5/include/object3d.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/vector
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/stl_uninitialized.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/stl_vector.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/stl_bvector.h
  D:/ProgramFiles/mingw64/include/c++/12.2.0/bits/vector.tcc
- D:/ComputerScience/Graphics/MIT/assignment5/include/matrix.h
  D:/ComputerScience/Graphics/MIT/assignment5/include/boundingbox.h
+ D:/ComputerScience/Graphics/MIT/assignment5/include/grid.h
+ D:/ComputerScience/Graphics/MIT/assignment5/include/grid.h
+ D:/ComputerScience/Graphics/MIT/assignment5/include/hit.h
+ D:/ComputerScience/Graphics/MIT/assignment5/include/ray.h
+ D:/ComputerScience/Graphics/MIT/assignment5/include/matrix.h
+ D:/ComputerScience/Graphics/MIT/assignment5/include/ray.h
  D:/ComputerScience/Graphics/MIT/assignment5/external/GL/freeglut.h
  D:/ComputerScience/Graphics/MIT/assignment5/external/GL/freeglut_std.h
  D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/windows.h
@@ -4679,6 +4681,7 @@ CMakeFiles/raytracer.dir/raytracer.obj
  D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include/assert.h
  D:/ComputerScience/Graphics/MIT/assignment5/include/hit.h
  D:/ComputerScience/Graphics/MIT/assignment5/include/ray.h
+ D:/ComputerScience/Graphics/MIT/assignment5/include/matrix.h
  D:/ComputerScience/Graphics/MIT/assignment5/include/ray.h
  D:/ComputerScience/Graphics/MIT/assignment5/include/scene_parser.h
  D:/ComputerScience/Graphics/MIT/assignment5/include/group.h

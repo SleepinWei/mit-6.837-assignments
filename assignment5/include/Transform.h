@@ -13,5 +13,7 @@ public:
 
     virtual bool intersect(const Ray &r, Hit &h, float tmin) override;
 
-    virtual void paint(); 
+    virtual void insertIntoGrid(Grid *g, Matrix *m);
+
+    virtual void paint();
 };

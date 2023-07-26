@@ -30,7 +30,9 @@ public:
 class Grid: public Object3D{
 public:
     vector<vector<vector<vector<Object3D*>>>> arr;
-    int nx, ny, nz; 
+    int nx, ny, nz;
+
+    int scale; // 可视化参数
 
 public:
     Grid(BoundingBox *bb, int nx, int ny, int nz);

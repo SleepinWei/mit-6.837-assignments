@@ -88,10 +88,10 @@ void renderCube(Vec3f pos_min, Vec3f pos_max, Vec3f color)
     glEnd();
 }
 
-Vec3f mapNumToColor(int num)
+Vec3f mapNumToColor(int num,float scale =25.0f)
 {
     Vec3f color(1.0f, 1.0f, 1.0f);
-    color = color * (1.0f - num / 25.0f * 0.8f);
+    color = color * (1.0f - num / scale * 0.8f);
     return color;
 }
 
@@ -116,7 +116,7 @@ void Grid::paint()
                     Vec3f::Mult(pos, size, {i, j, k});
                     pos += min_pos;
 
-                    renderCube(pos, pos + size, mapNumToColor(num));
+                    renderCube(pos, pos + size, mapNumToColor(num-1,scale));
                 }
             }
         }
@@ -141,7 +141,7 @@ bool Grid::intersect(const Ray &r, Hit &h, float tmin)
         {
             // std::cout << info.i << ' ' << info.j << ' ' << info.k << '\n';
 
-            this->mat->setDiffuseColor(mapNumToColor(num));
+            this->mat->setDiffuseColor(mapNumToColor(num-1,scale));
 
             h.set(info.tmin, this->mat, info.normal, r);
             return true;

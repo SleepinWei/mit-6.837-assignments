@@ -48,6 +48,7 @@ void Group::generateBoundingBox(){
     {
         auto inst = instances[i];
         inst->generateBoundingBox(); 
+
         auto bounding_box = inst->getBoundingBox();
         if(bounding_box){
             Vec3f::Min(pos_min, pos_min, bounding_box->getMin());

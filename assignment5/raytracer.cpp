@@ -1,5 +1,6 @@
 #include"raytracer.h"
 #include"hit.h"
+#include"matrix.h"
 #include"ray.h"
 #include"scene_parser.h"
 #include"group.h"
@@ -67,7 +68,19 @@ RayTracer::RayTracer(SceneParser *s, int max_bounces, float cutoff_weight, bool 
 
     if(enable_grid){
         grid = new Grid(group->getBoundingBox(),nx,ny,nz);
-        group->insertIntoGrid(grid, nullptr);
+        Matrix identity;
+        identity.SetToIdentity();
+        group->insertIntoGrid(grid,&identity);
+
+        int sum_max = 0;
+        for (int i = 0; i < grid->nx;i++){
+            for (int j = 0; j < grid->ny;j++){
+                for (int k = 0; k < grid->nz;k++){
+                    sum_max = std::max(sum_max, (int)grid->arr[i][j][k].size());
+                }
+            }
+        }
+        grid->scale = sum_max - 1;
     }
     else {
         grid = nullptr;

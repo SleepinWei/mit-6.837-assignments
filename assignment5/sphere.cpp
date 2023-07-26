@@ -125,25 +125,59 @@ void Sphere::paint(){
 }
 
 void Sphere::insertIntoGrid(Grid *g, Matrix *m){
+    if(m){
+        Vec3f newCenter = center;
+        m->Transform(newCenter);
+
+        Vec4f rad_vec(radius, 0.0f, 0.0f,0.0f);
+        Matrix newM = *m;
+        newM.Set(3, 0, 0);
+        newM.Set(3, 1, 0);
+        newM.Set(3, 2, 0);
+
+        m->Transform(rad_vec);
+        float newRadius = rad_vec.Length();
+
+        delete bb;
+        bb = new BoundingBox(newCenter - Vec3f{newRadius,newRadius,newRadius},
+            newCenter + Vec3f{newRadius,newRadius,newRadius});
+    }
+
     auto bounding_box = g->getBoundingBox();
     Vec3f max_pos = bounding_box->getMax();
     Vec3f min_pos = bounding_box->getMin();
     Vec3f size = max_pos - min_pos;
     size.Divide(g->nx, g->ny, g->nz);
 
-    for (int i = 0; i < g->nx;i++){
-        for (int j = 0; j < g->ny;j++){
-            for (int k = 0; k < g->nz;k++){
-                Vec3f pos;
-                Vec3f::Mult(pos, size, {i, j, k});
-                pos += min_pos;
-                Vec3f pos_center = 0.5f * size + pos; // 中心
-                float half_len = 0.5f * sqrtf(size.Dot3(size));
+    auto bb_min = bb->getMin();
+    auto bb_max = bb->getMax();
 
-                if((pos_center - center).Length() - half_len <= radius){
-                    g->arr[i][j][k].push_back(this); 
-                }
+    Vec3f min_grid = bb_min - min_pos, max_grid = bb_max - min_pos;
+    min_grid.Divide(size.x(), size.y(), size.z());
+    max_grid.Divide(size.x(), size.y(), size.z());
+    for (int i = std::max(0.0f, floor(min_grid.x())); i <= std::min(g->nx * 1.0f - 1, (max_grid.x())); i++)
+    {
+        for (int j = std::max(0.0f, floor(min_grid.y())); j <= std::min(g->ny * 1.0f -1, (max_grid.y())); j++)
+        {
+            for (int k = std::max(0.0f, floor(min_grid.z())); k <= std::min(g->nz * 1.0f -1, (max_grid.z())); k++)
+            {
+                g->arr[i][j][k].push_back(this);
             }
         }
     }
+    // for (int i = 0; i < g->nx;i++){
+        // for (int j = 0; j < g->ny;j++){
+            // for (int k = 0; k < g->nz;k++){
+                // Vec3f pos;
+                // Vec3f::Mult(pos, size, {i, j, k});
+                // pos += min_pos;
+                // Vec3f pos_center = 0.5f * size + pos; // 中心
+                // float half_len = 0.5f * sqrtf(size.Dot3(size));
+
+                // if((pos_center - center).Length() - half_len <= radius){
+                //     g->arr[i][j][k].push_back(this); 
+                // }
+            // }
+        // }
+    // }
 }

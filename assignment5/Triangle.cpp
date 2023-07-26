@@ -116,6 +116,28 @@ bool IsInsideTriangle(Vec3f p, Vec3f a, Vec3f b, Vec3f c)
 
 void Triangle::insertIntoGrid(Grid *g, Matrix *m)
 {
+    // apply matrix;
+    if(m){
+        Vec3f newa = a, newb = b, newc = c;
+        m->Transform(newa);
+        m->Transform(newb);
+        m->Transform(newc);
+
+        // bounding box
+        Vec3f pos_min;
+        Vec3f pos_max;
+
+        Vec3f::Min(pos_min, newa, newb);
+        Vec3f::Min(pos_min, pos_min, newc);
+
+        Vec3f::Max(pos_max, newa, newb);
+        Vec3f::Max(pos_max, pos_max, newc);
+
+        delete bb;
+        // new box
+        this->bb = new BoundingBox(pos_min, pos_max);
+    }
+
     auto bounding_box = g->getBoundingBox();
     Vec3f max_pos = bounding_box->getMax();
     Vec3f min_pos = bounding_box->getMin();

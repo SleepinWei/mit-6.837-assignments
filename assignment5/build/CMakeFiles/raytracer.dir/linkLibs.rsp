@@ -1,1 +1,1 @@
-  -LC:/Users/Admin/Documents/mit/assignment5/lib  C:/Users/Admin/Documents/mit/assignment5/lib/libfreeglut.lib -lopengl32 -lwinmm -lgdi32 -lglu32 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+  -LD:/ComputerScience/Graphics/MIT/assignment5/lib  D:/ComputerScience/Graphics/MIT/assignment5/lib/libfreeglut.lib -lopengl32 -lwinmm -lgdi32 -lglu32 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

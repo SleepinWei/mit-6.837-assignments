@@ -12,8 +12,11 @@ public:
 
     virtual void paint();
 
-    void insertIntoGrid(Grid *g, Matrix *m);
+    virtual void insertIntoGrid(Grid *g, Matrix *m) override;
+
+    void generateBoundingBox();
 
 public:
     Group(int number);
+    ~Group();
 };

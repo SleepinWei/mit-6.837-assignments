@@ -9,6 +9,7 @@ public:
 
 public:
     Transform(Matrix &m, Object3D *o);
+    ~Transform();
 
     virtual bool intersect(const Ray &r, Hit &h, float tmin) override;
 

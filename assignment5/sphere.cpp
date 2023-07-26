@@ -3,6 +3,7 @@
 #include"sphere.h"
 #include"ray.h"
 #include"boundingbox.h"
+#include"grid.h"
 #include"hit.h"
 
 Sphere::Sphere(Vec3f center, float radius, Material *mat){
@@ -135,9 +136,11 @@ void Sphere::insertIntoGrid(Grid *g, Matrix *m){
             for (int k = 0; k < g->nz;k++){
                 Vec3f pos;
                 Vec3f::Mult(pos, size, {i, j, k});
-                pos += min_pos; 
+                pos += min_pos;
+                Vec3f pos_center = 0.5f * size + pos; // 中心
+                float half_len = 0.5f * sqrtf(size.Dot3(size));
 
-                if((pos-center).Length() <= radius){
+                if((pos_center - center).Length() - half_len <= radius){
                     g->arr[i][j][k] = true; 
                 }
             }

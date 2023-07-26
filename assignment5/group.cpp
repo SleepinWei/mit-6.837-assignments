@@ -1,13 +1,11 @@
 #include"group.h"
 #include<assert.h>
 #include"hit.h"
+#include"boundingbox.h"
 
 Group::Group(int number){
     instances = vector<Object3D *>(number, nullptr);
-}
-
-Group::~Group(){
-
+    bb = nullptr; 
 }
 
 void Group::addObject(int index, Object3D* obj){
@@ -37,5 +35,27 @@ void Group::paint(){
 void Group::insertIntoGrid(Grid *g, Matrix *m){
     for(auto inst : instances){
         inst->insertIntoGrid(g, m);
+    }
+}
+
+void Group::generateBoundingBox(){
+    Vec3f pos_min(INFINITY,INFINITY,INFINITY);
+    Vec3f pos_max(-1e6,-1e6,-1e6); 
+
+    for (int i = 0; i < instances.size();i++)
+    {
+        auto inst = instances[i];
+        auto bounding_box = inst->getBoundingBox();
+
+        Vec3f::Min(pos_min, pos_min, bounding_box->getMin());
+        Vec3f::Max(pos_max, pos_max, bounding_box->getMax());
+    }
+
+    bb = new BoundingBox(pos_min,pos_max);
+}
+
+Group::~Group(){
+    if(bb){
+        delete bb; 
     }
 }

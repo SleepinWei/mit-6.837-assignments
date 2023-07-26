@@ -1,18 +1,17 @@
-#include<GL/freeglut.h>
-#include<memory>
-#include"rayTree.h"
-#include"scene_parser.h"
-#include"image.h"
-#include"vectors.h"
-#include"group.h"
-#include"light.h"
-#include"camera.h"
+#include "camera.h"
+#include "glCanvas.h"
+#include "group.h"
 #include "hit.h"
-#include"material.h"
-#include"glCanvas.h"
-#include"raytracer.h"
-#include<cstring>
-
+#include "image.h"
+#include "light.h"
+#include "material.h"
+#include "rayTree.h"
+#include "raytracer.h"
+#include "scene_parser.h"
+#include "vectors.h"
+#include <GL/freeglut.h>
+#include <cstring>
+#include <memory>
 
 using std::cout;
 
@@ -35,26 +34,29 @@ bool shadows = false;
 int max_bounces = 10;
 float cutoff_weight = 0.001f;
 int nx, ny, nz;
-bool enable_grid =false ; 
-bool visualize_grid = false; 
-SceneParser* p_parser; 
-RayTracer* p_tracer; 
+bool enable_grid = false;
+bool visualize_grid = false;
+SceneParser *p_parser;
+RayTracer *p_tracer;
 
-void renderFunction(){
+void renderFunction()
+{
 
 	Camera *camera = p_parser->getCamera();
-    Group *group = p_parser->getGroup();
-    Vec3f background = p_parser->getBackgroundColor();
+	Group *group = p_parser->getGroup();
+	Vec3f background = p_parser->getBackgroundColor();
 
 	int w = width, h = height;
-    Image image(w, h);
+	Image image(w, h);
 
 	int numlight = p_parser->getNumLights();
 
-	for (int i = 0; i < height;i++){
-        for (int j = 0; j < w;j++){
-            Vec2f coordinate(j * 1.0f / w, i * 1.0f / height);
-            Hit h;
+	for (int i = 0; i < height; i++)
+	{
+		for (int j = 0; j < w; j++)
+		{
+			Vec2f coordinate(j * 1.0f / w, i * 1.0f / height);
+			Hit h;
 			h.set(INFINITY, nullptr, {}, {});
 
 			Ray r = camera->generateRay(coordinate);
@@ -62,113 +64,146 @@ void renderFunction(){
 			Vec3f Color = p_tracer->traceRay(r, 0.0f, 0, 1.0f, 1.0f, h);
 
 			image.SetPixel(j, i, Color);
-        }
-    }
+		}
+	}
 
 	char out_prefix[100] = "./result/";
-	image.SaveTGA(strcat(out_prefix, output_file)); 
+	image.SaveTGA(strcat(out_prefix, output_file));
 	char out_depth_prefix[100] = "./result/";
 }
 
-void traceRayFunction(float x, float y){
+void traceRayFunction(float x, float y)
+{
 	Camera *camera = p_parser->getCamera();
-	Ray r = camera->generateRay(Vec2f(x,y));
-	Hit hit{INFINITY,nullptr,{}}; 
+	Ray r = camera->generateRay(Vec2f(x, y));
+	Hit hit{INFINITY, nullptr, {}};
 	p_tracer->traceSingleRay(r, camera->getTMin(), 0, cutoff_weight, 1.0f, hit);
 
 	RayTree::SetMainSegment(r, 0, hit.getT());
 }
 
-int main(int argc, char** argv){
+int main(int argc, char **argv)
+{
 
 	// sample command line:
 	// raytracer -input scene1_1.txt -size 200 200 -output output1_1.tga -depth 9 10 depth1_1.tga
-	for (int i = 1; i < argc; i++) {
-	  if (!strcmp(argv[i],"-input")) {
-		i++; assert (i < argc); 
-		input_file = argv[i];
-	  } else if (!strcmp(argv[i],"-size")) {
-		i++; assert (i < argc); 
-		width = atoi(argv[i]);
-		i++; assert (i < argc); 
-		height = atoi(argv[i]);
-	  } else if (!strcmp(argv[i],"-output")) {
-		i++; assert (i < argc); 
-		output_file = argv[i];
-	  } else if (!strcmp(argv[i],"-depth")) {
-		enable_depth = true; 
-		i++; assert (i < argc); 
-		depth_min = atof(argv[i]);
-		i++; assert (i < argc); 
-		depth_max = atof(argv[i]);
-		i++; assert (i < argc); 
-		depth_file = argv[i];
-	  } else if (!strcmp(argv[i],"-normals")){
-		enable_normal = true;
-		i++;
-		assert(i < argc);
-		normals_file = argv[i];
-	  } else if (!strcmp(argv[i],"-shade_back")){
-		assert(i < argc);
-		shade_back = true; 
-	  } 
-	   else if (!strcmp(argv[i],"-gui")){
-		assert(i < argc);
-		enable_gui = true; 
-	   }
-	   else if (!strcmp(argv[i],"-tessellation")){
-		++i;
-		assert(i < argc);
-		tessx = atof(argv[i]);
-		++i;
-		tessy = atof(argv[i]);
-	   }
-	   else if (!strcmp(argv[i],"-gouraud")){
-		enable_gouraud = true;
-	   }
-	   else if (!strcmp(argv[i],"-shadows")){
-		shadows = true;
-	   }
-	   else if (!strcmp(argv[i],"-bounces")){
-		++i; 
-		max_bounces= atof(argv[i]);
-	   }
-	   else if (!strcmp(argv[i],"-weight")){
-		++i; 
-		cutoff_weight = atof(argv[i]);
-	   }
-		else if (!strcmp(argv[i],"-grid")){
-		++i;
-		nx = atof(argv[i]);
-		++i;
-		ny = atof(argv[i]);
-		++i;
-		nz = atof(argv[i]);
-	   }
-		else if (!strcmp(argv[i],"-visualize_grid")){
-		visualize_grid = true;
-		}	
-	  else {
-		printf ("whoops error with command line argument %d: '%s'\n",i,argv[i]);
-		assert(0);
-	  }
+	for (int i = 1; i < argc; i++)
+	{
+		if (!strcmp(argv[i], "-input"))
+		{
+			i++;
+			assert(i < argc);
+			input_file = argv[i];
+		}
+		else if (!strcmp(argv[i], "-size"))
+		{
+			i++;
+			assert(i < argc);
+			width = atoi(argv[i]);
+			i++;
+			assert(i < argc);
+			height = atoi(argv[i]);
+		}
+		else if (!strcmp(argv[i], "-output"))
+		{
+			i++;
+			assert(i < argc);
+			output_file = argv[i];
+		}
+		else if (!strcmp(argv[i], "-depth"))
+		{
+			enable_depth = true;
+			i++;
+			assert(i < argc);
+			depth_min = atof(argv[i]);
+			i++;
+			assert(i < argc);
+			depth_max = atof(argv[i]);
+			i++;
+			assert(i < argc);
+			depth_file = argv[i];
+		}
+		else if (!strcmp(argv[i], "-normals"))
+		{
+			enable_normal = true;
+			i++;
+			assert(i < argc);
+			normals_file = argv[i];
+		}
+		else if (!strcmp(argv[i], "-shade_back"))
+		{
+			assert(i < argc);
+			shade_back = true;
+		}
+		else if (!strcmp(argv[i], "-gui"))
+		{
+			assert(i < argc);
+			enable_gui = true;
+		}
+		else if (!strcmp(argv[i], "-tessellation"))
+		{
+			++i;
+			assert(i < argc);
+			tessx = atof(argv[i]);
+			++i;
+			tessy = atof(argv[i]);
+		}
+		else if (!strcmp(argv[i], "-gouraud"))
+		{
+			enable_gouraud = true;
+		}
+		else if (!strcmp(argv[i], "-shadows"))
+		{
+			shadows = true;
+		}
+		else if (!strcmp(argv[i], "-bounces"))
+		{
+			++i;
+			max_bounces = atof(argv[i]);
+		}
+		else if (!strcmp(argv[i], "-weight"))
+		{
+			++i;
+			cutoff_weight = atof(argv[i]);
+		}
+		else if (!strcmp(argv[i], "-grid"))
+		{
+			enable_grid = true;
+			++i;
+			nx = atof(argv[i]);
+			++i;
+			ny = atof(argv[i]);
+			++i;
+			nz = atof(argv[i]);
+		}
+		else if (!strcmp(argv[i], "-visualize_grid"))
+		{
+			visualize_grid = true;
+		}
+		else
+		{
+			printf("whoops error with command line argument %d: '%s'\n", i, argv[i]);
+			assert(0);
+		}
 	}
 
-	assert(input_file != nullptr && output_file != nullptr && (enable_depth == false || depth_file != nullptr) && (enable_normal==false || normals_file != nullptr ));
+	assert(input_file != nullptr && output_file != nullptr && (enable_depth == false || depth_file != nullptr) && (enable_normal == false || normals_file != nullptr));
 
 	char prefix[100] = "./scene/";
 	SceneParser parser(strcat(prefix, input_file));
 	p_parser = &parser;
-	RayTracer tracer(p_parser,max_bounces,cutoff_weight,shadows);
+	RayTracer tracer(p_parser, max_bounces, cutoff_weight, shadows);
 	p_tracer = &tracer;
-	if(enable_gui){
+	if (enable_gui)
+	{
 		glutInit(&argc, argv);
 		GLCanvas canvas;
-		canvas.initialize(&parser,renderFunction,traceRayFunction);
+		canvas.initialize(&parser, renderFunction, traceRayFunction, p_tracer->grid, visualize_grid);
 	}
-	else{
+	else
+	{
 		renderFunction();
 	}
 
-    return 0;
+	return 0;
 }

@@ -7,6 +7,7 @@
 #include"light.h"
 #include"material.h"
 #include"rayTree.h"
+#include"grid.h"
 #include"object3d.h"
 
 bool partial_ge(const Vec3f& v1, const Vec3f& v2){
@@ -51,7 +52,8 @@ Vec3f mirrorDirection(const Vec3f &normal, const Vec3f &incoming){
     return reflect;
 }
 
-extern bool enable_grid; 
+extern bool enable_grid;
+extern int nx, ny, nz; 
 
 RayTracer::RayTracer(SceneParser *s, int max_bounces, float cutoff_weight, bool shadows){
     this->parser = s;
@@ -59,11 +61,22 @@ RayTracer::RayTracer(SceneParser *s, int max_bounces, float cutoff_weight, bool 
     this->cutoff_weight = cutoff_weight;
     this->shadows = shadows;
 
+    auto group =(Group*) s->getGroup();
+    if(!group->getBoundingBox())
+        group->generateBoundingBox();
+
     if(enable_grid){
-        grid = new Grid();
+        grid = new Grid(group->getBoundingBox(),nx,ny,nz);
+        group->insertIntoGrid(grid, nullptr);
     }
     else {
         grid = nullptr;
+    }
+}
+
+RayTracer::~RayTracer(){
+    if(grid){
+        delete grid; 
     }
 }
 

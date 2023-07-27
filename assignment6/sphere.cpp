@@ -144,24 +144,26 @@ void Sphere::paint()
 
 void Sphere::insertIntoGrid(Grid *g, Matrix *m)
 {
-    if (m)
-    {
-        Vec3f newCenter = center;
-        m->Transform(newCenter);
+    // if (m)
+    // {
+    //     Vec3f newCenter = center;
+    //     m->Transform(newCenter);
 
-        Vec4f rad_vec(radius, 0.0f, 0.0f, 0.0f);
-        Matrix newM = *m;
-        newM.Set(3, 0, 0);
-        newM.Set(3, 1, 0);
-        newM.Set(3, 2, 0);
+    //     Vec4f rad_vec(radius, 0.0f, 0.0f, 0.0f);
+    //     Matrix newM = *m;
+    //     newM.Set(3, 0, 0);
+    //     newM.Set(3, 1, 0);
+    //     newM.Set(3, 2, 0);
 
-        m->Transform(rad_vec);
-        float newRadius = rad_vec.Length();
+    //     m->Transform(rad_vec);
+    //     float newRadius = rad_vec.Length();
 
-        delete bb;
-        bb = new BoundingBox(newCenter - Vec3f{newRadius, newRadius, newRadius},
-                             newCenter + Vec3f{newRadius, newRadius, newRadius});
-    }
+    //     delete bb;
+    //     bb = new BoundingBox(newCenter - Vec3f{newRadius, newRadius, newRadius},
+    //                          newCenter + Vec3f{newRadius, newRadius, newRadius});
+    // }
+
+    Transform *trans = new Transform(*m, this);
 
     auto bounding_box = g->getBoundingBox();
     Vec3f max_pos = bounding_box->getMax();
@@ -169,17 +171,23 @@ void Sphere::insertIntoGrid(Grid *g, Matrix *m)
     Vec3f size = max_pos - min_pos;
     size.Divide(g->nx, g->ny, g->nz);
 
-    auto bb_min = bb->getMin();
-    auto bb_max = bb->getMax();
+    auto bb_min = trans->bb->getMin();
+    auto bb_max = trans->bb->getMax();
 
-    Vec3f min_grid = bb_min - min_pos, max_grid = bb_max - min_pos;
+    Vec3f _center = bb_min + bb_max;
+    _center.Divide(2, 2, 2);
+    float _radius = bb_max.x() - bb_min.x();
+    _radius /= 2;
+
+    Vec3f min_grid = bb_min - min_pos,
+          max_grid = bb_max - min_pos;
     min_grid.Divide(size.x(), size.y(), size.z());
     max_grid.Divide(size.x(), size.y(), size.z());
-    for (int i = std::max(0.0f, floor(min_grid.x())); i <= std::min(g->nx * 1.0f - 1, (max_grid.x())); i++)
+    for (int i = std::max(0.0f, floor(min_grid.x())); i <= std::min(g->nx * 1.0f - 1, ceil(max_grid.x())); i++)
     {
-        for (int j = std::max(0.0f, floor(min_grid.y())); j <= std::min(g->ny * 1.0f - 1, (max_grid.y())); j++)
+        for (int j = std::max(0.0f, floor(min_grid.y())); j <= std::min(g->ny * 1.0f - 1, ceil(max_grid.y())); j++)
         {
-            for (int k = std::max(0.0f, floor(min_grid.z())); k <= std::min(g->nz * 1.0f - 1, (max_grid.z())); k++)
+            for (int k = std::max(0.0f, floor(min_grid.z())); k <= std::min(g->nz * 1.0f - 1, ceil(max_grid.z())); k++)
             {
                 // g->arr[i][j][k].push_back(new Transform(*m,this));
                 Vec3f pos;
@@ -188,11 +196,13 @@ void Sphere::insertIntoGrid(Grid *g, Matrix *m)
                 Vec3f pos_center = 0.5f * size + pos; // 中心
                 float half_len = 0.5f * sqrtf(size.Dot3(size));
 
-                if ((pos_center - center).Length() - half_len <= radius)
+                if ((pos_center - _center).Length() - half_len <= _radius)
                 {
                     g->arr[i][j][k].push_back(new Transform(*m,this));
                 }
             }
         }
     }
+
+    delete trans;
 }

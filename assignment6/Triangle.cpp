@@ -139,7 +139,8 @@ void Triangle::insertIntoGrid(Grid *g, Matrix *m)
 
         delete bb;
         // new box
-        this->bb = new BoundingBox(pos_min, pos_max);
+        const float eps = 1e-4;
+        this->bb = new BoundingBox(pos_min - Vec3f{eps,eps,eps}, pos_max + Vec3f{eps,eps,eps});
     }
 
     auto bounding_box = g->getBoundingBox();
@@ -154,11 +155,11 @@ void Triangle::insertIntoGrid(Grid *g, Matrix *m)
     Vec3f min_grid = bb_min - min_pos, max_grid = bb_max - min_pos;
     min_grid.Divide(size.x(), size.y(), size.z());
     max_grid.Divide(size.x(), size.y(), size.z());
-    for (int i = std::max(0.0f, floor(min_grid.x())); i <= std::min(g->nx * 1.0f - 1, (max_grid.x())); i++)
+    for (int i = std::max(0.0f, floor(min_grid.x())); i <= std::min(g->nx * 1.0f - 1, ceil(max_grid.x())); i++)
     {
-        for (int j = std::max(0.0f, floor(min_grid.y())); j <= std::min(g->ny * 1.0f -1, (max_grid.y())); j++)
+        for (int j = std::max(0.0f, floor(min_grid.y())); j <= std::min(g->ny * 1.0f -1, ceil(max_grid.y())); j++)
         {
-            for (int k = std::max(0.0f, floor(min_grid.z())); k <= std::min(g->nz * 1.0f -1, (max_grid.z())); k++)
+            for (int k = std::max(0.0f, floor(min_grid.z())); k <= std::min(g->nz * 1.0f -1, ceil(max_grid.z())); k++)
             {
                 g->arr[i][j][k].push_back(new Transform(*m,this));
             }

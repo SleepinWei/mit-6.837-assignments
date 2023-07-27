@@ -286,6 +286,17 @@ Ray PerspectiveCamera::generateRay(Vec2f point){
 
     ray_dir.Normalize(); // normalization
 
+    const float eps = 1e-4; 
+    float x = ray_dir.x(), y = ray_dir.y(), z = ray_dir.z();
+    if(x==0){
+      x = eps; 
+    }
+    if(y == 0)
+      y = eps;
+    if(z==0)
+      z = eps;
+    ray_dir.Set(x, y, z);
+
     // cout << ray_dir << '\n';
 
     return Ray(this->center, ray_dir);

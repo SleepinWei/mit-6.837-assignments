@@ -116,19 +116,27 @@ bool RayTracer::RayCast(Ray& ray, Hit& hit, float tmin,Group* group,bool shadowR
 
 bool RayTracer::RayCastFast(Ray &ray, Hit &hit, float tmin,Group* group) const
 {
+    bool actual_intersect = false; 
+    for(auto object : grid->other_objects){
+        actual_intersect |= object->intersect(ray, hit, tmin);
+    }
+
     Hit grid_h(INFINITY,nullptr,{}); 
     bool isIntersect = grid->intersect(ray, grid_h, tmin);
     auto info = grid->info;
-    if(!isIntersect){
-        return false; 
-    }
 
-    bool actual_intersect = false; 
-    for(auto object: grid->arr[info.i][info.j][info.k]){
-        actual_intersect |= object->intersect(ray, hit, tmin);
-    }
-    for(auto object : grid->other_objects){
-        actual_intersect |= object->intersect(ray, hit, tmin);
+    bool grid_intersect = false; 
+    while (info.i >= 0 && info.i < nx && info.j >= 0 && info.j < ny && info.k >= 0 && info.k < nz)
+    {
+        for(auto object: grid->arr[info.i][info.j][info.k]){
+            grid_intersect |= object->intersect(ray, hit, tmin);
+        }
+
+        if(grid_intersect){ // 找到了 grid 里相交的物体，并和 不在 grid 里的物体求较小值
+            return true;
+        }
+
+        info.nextCell(); // 继续走下一个 grid
     }
 
     return actual_intersect;

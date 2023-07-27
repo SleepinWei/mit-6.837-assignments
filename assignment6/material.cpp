@@ -135,12 +135,13 @@ Vec3f Noise::Shade(const Ray &ray, const Hit &hit, const Vec3f &dirToLight,
   float N = 0;
   for (int i = 0; i < octaves;i++){
     float coeff = 2 << i;
-    N += PerlinNoise::noise(coeff * p.x(), coeff * p.y(), coeff * p.z()) / coeff; 
+    N += abs(PerlinNoise::noise(coeff * p.x(), coeff * p.y(), coeff * p.z())) / coeff; 
   }
-  N = std::min(std::max(N, 0.0f), 1.0f); // clamp to 0~1
+  N *= 2.0f;
+  // N = std::min(std::max(N, 0.0f), 1.0f); // clamp to 0~1
   Vec3f color1 = mat1->Shade(ray, hit, dirToLight, lightColor);
   Vec3f color2 = mat2->Shade(ray, hit, dirToLight, lightColor);
-  Vec3f Color = color1 * N + color2 * (1 - N);
+  Vec3f Color = color1 * N + color2 * (1-N);
   return Color;
 }
 
@@ -152,8 +153,8 @@ Vec3f Noise::getDiffuseColor(Vec3f p) const{
     float coeff = 2 << i;
     N += PerlinNoise::noise(coeff * p.x(), coeff * p.y(), coeff * p.z()) / coeff; 
   }
-  N = std::min(std::max(N, 0.0f), 1.0f); // clamp to 0~1
-  return mat1->getDiffuseColor() * N + mat2->getDiffuseColor() * (1 - N);
+  // return mat1->getDiffuseColor() * N + mat2->getDiffuseColor() * (1 - N);
+  return {0, 0, 0};
 }
 
 Vec3f Marble::Shade(const Ray &ray, const Hit &hit, const Vec3f &dirToLight,
@@ -165,25 +166,29 @@ Vec3f Marble::Shade(const Ray &ray, const Hit &hit, const Vec3f &dirToLight,
   float N = 0;
   for (int i = 0; i < octaves;i++){
     float coeff = 2 << i;
-    N += PerlinNoise::noise(coeff * p.x(), coeff * p.y(), coeff * p.z()) / coeff; 
+    N += abs(PerlinNoise::noise(coeff * p.x(), coeff * p.y(), coeff * p.z())) / coeff; 
   }
-  float M = sin(frequency * p.x() + amplitude * N);
+  // N = std::min(std::max(N, 0.0f), 1.0f);
+  float M = (sin(frequency * p.x() + amplitude * N));
+  M = 0.5f * (M + 1);
+
   Vec3f color1 = mat1->Shade(ray, hit, dirToLight, lightColor);
   Vec3f color2 = mat2->Shade(ray, hit, dirToLight, lightColor);
-  Vec3f Color = color1 * M + color2 * (1 - M);
+  Vec3f Color = color1 * M + color2 * (1-M);
   return Color;
 }
 
 Vec3f Marble::getDiffuseColor(Vec3f p) const{
-  this->m->Transform(p);
+  // this->m->Transform(p);
 
-  float N = 0;
-  for (int i = 0; i < octaves;i++){
-    float coeff = 2 << i;
-    N += PerlinNoise::noise(coeff * p.x(), coeff * p.y(), coeff * p.z()) / coeff; 
-  }
-  float M = sin(frequency * p.x() + amplitude * N);
-  return mat1->getDiffuseColor() * M + mat2->getDiffuseColor() * (1 - M);
+  // float N = 0;
+  // for (int i = 0; i < octaves;i++){
+  //   float coeff = 2 << i;
+  //   N += PerlinNoise::noise(coeff * p.x(), coeff * p.y(), coeff * p.z()) / coeff; 
+  // }
+  // float M = sin(frequency * p.x() + amplitude * N);
+  // return mat1->getDiffuseColor() * M + mat2->getDiffuseColor() * (1 - M);
+  return {0.0f,0,0};
 }
 
 Vec3f Wood::Shade(const Ray &ray, const Hit &hit, const Vec3f &dirToLight,

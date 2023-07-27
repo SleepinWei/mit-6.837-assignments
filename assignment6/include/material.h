@@ -105,7 +105,7 @@ public:
       trans->Transform(p);
           int x = p.x(), y = p.y(), z = p.z();
       Material *mat = mat1;
-      if ((x + y + z) % 2 == 1)
+      if ((x * x + y * y + z * z) % 2 == 1)
       {
         mat = mat2;
       }

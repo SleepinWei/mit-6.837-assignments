@@ -324,7 +324,7 @@ void Grid::initializeRayMarch(MarchingInfo &mi, const Ray &r, float tmin) const
             }
             else
             {
-                cout << "Wrong normal\n";
+                cout << "Wrong normal"<< pos.x() << ' ' << pos.y() << ' ' << pos.z() << "\n";
             }
             if (mi.i == nx)
                 mi.i -= 1;

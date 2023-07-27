@@ -116,9 +116,9 @@ Vec3f Checkerboard::Shade(const Ray &ray, const Hit &hit, const Vec3f &dirToLigh
 {
   Vec3f p = hit.getIntersectionPoint();
   this->trans->Transform(p);
-  int x = p.x(), y = p.y(), z = p.z();
+  int x = floor(p.x()) , y = floor(p.y()), z = floor(p.z());
   Material *mat = mat1;
-  if ((x + y + z) % 2 == 1)
+  if ((x + y + z) % 2 != 0)
   {
     mat = mat2;
   }

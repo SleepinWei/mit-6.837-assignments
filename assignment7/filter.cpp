@@ -1,5 +1,8 @@
 #include "filter.h"
+#include"vectors.h"
 #include "film.h"
+#include<iostream>
+using std::cout;
 
 float BoxFilter::getWeight(float x, float y)
 {
@@ -41,9 +44,11 @@ Vec3f Filter::getColor(int i, int j, Film *film)
             for (int index = 0; index < film->getNumSamples(); index++)
             {
                 Sample s = film->getSample(pos_x, pos_y, index);
-                Vec2f offset;
+                Vec2f offset(0,0);
                 Vec2f::Sub(offset, s.getPosition(), {0.5f, 0.5f});
-                offset += Vec2f{pos_x - i, pos_y - j}; // 不同各自由不同的offset
+                // cout << offset.x() << ' ' << offset.y() << '\n';
+                Vec2f::Add(offset,offset, Vec2f{pos_x - i, pos_y - j}); // 不同各自由不同的offset
+                // cout << offset.x() << ' ' << offset.y() << "#\n";
 
                 float weight = getWeight(offset.x(), offset.y());
                 sum_weight += weight;

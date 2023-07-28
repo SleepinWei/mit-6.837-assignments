@@ -15,7 +15,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/Admin/Documents/mingw64/bin/addr2line.exe"
+			"value" : "D:/ProgramFiles/mingw64/bin/addr2line.exe"
 		},
 		{
 			"name" : "CMAKE_AR",
@@ -31,7 +31,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/Admin/Documents/mingw64/bin/ar.exe"
+			"value" : "D:/ProgramFiles/mingw64/bin/ar.exe"
 		},
 		{
 			"name" : "CMAKE_BACKWARDS_COMPATIBILITY",
@@ -67,7 +67,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/Admin/Documents/mit/assignment7/build"
+			"value" : "d:/ComputerScience/Graphics/MIT/assignment7/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -103,7 +103,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "4"
+			"value" : "1"
 		},
 		{
 			"name" : "CMAKE_COLOR_MAKEFILE",
@@ -131,7 +131,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/Admin/Documents/mingw64/bin/cmake.exe"
+			"value" : "D:/ProgramFiles/Cmake/bin/cmake.exe"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -143,7 +143,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/Admin/Documents/mingw64/bin/cpack.exe"
+			"value" : "D:/ProgramFiles/Cmake/bin/cpack.exe"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -155,7 +155,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/Admin/Documents/mingw64/bin/ctest.exe"
+			"value" : "D:/ProgramFiles/Cmake/bin/ctest.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -171,7 +171,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/Admin/Documents/mingw64/bin/g++.exe"
+			"value" : "D:/ProgramFiles/mingw64/bin/g++.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_AR",
@@ -187,7 +187,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/Admin/Documents/mingw64/bin/gcc-ar.exe"
+			"value" : "D:/ProgramFiles/mingw64/bin/gcc-ar.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_RANLIB",
@@ -203,7 +203,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/Admin/Documents/mingw64/bin/gcc-ranlib.exe"
+			"value" : "D:/ProgramFiles/mingw64/bin/gcc-ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -315,7 +315,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/Admin/Documents/mingw64/bin/gcc.exe"
+			"value" : "D:/ProgramFiles/mingw64/bin/gcc.exe"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_AR",
@@ -331,7 +331,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/Admin/Documents/mingw64/bin/gcc-ar.exe"
+			"value" : "D:/ProgramFiles/mingw64/bin/gcc-ar.exe"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_RANLIB",
@@ -347,7 +347,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/Admin/Documents/mingw64/bin/gcc-ranlib.exe"
+			"value" : "D:/ProgramFiles/mingw64/bin/gcc-ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -459,7 +459,19 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/Admin/Documents/mingw64/bin/dlltool.exe"
+			"value" : "D:/ProgramFiles/mingw64/bin/dlltool.exe"
+		},
+		{
+			"name" : "CMAKE_EDIT_COMMAND",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to cache edit program executable."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "D:/ProgramFiles/Cmake/bin/cmake-gui.exe"
 		},
 		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
@@ -587,7 +599,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Admin/Documents/mit/assignment7/build/CMakeFiles/pkgRedirects"
+			"value" : "D:/ComputerScience/Graphics/MIT/assignment7/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -659,7 +671,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/Admin/Documents/mit/assignment7"
+			"value" : "D:/ComputerScience/Graphics/MIT/assignment7"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -687,7 +699,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/Admin/Documents/mingw64/bin/ld.exe"
+			"value" : "D:/ProgramFiles/mingw64/bin/ld.exe"
 		},
 		{
 			"name" : "CMAKE_MAKE_PROGRAM",
@@ -703,7 +715,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/Admin/Documents/mingw64/bin/mingw32-make.exe"
+			"value" : "D:/ProgramFiles/mingw64/bin/mingw32-make.exe"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -799,7 +811,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/Admin/Documents/mingw64/bin/nm.exe"
+			"value" : "D:/ProgramFiles/mingw64/bin/nm.exe"
 		},
 		{
 			"name" : "CMAKE_NUMBER_OF_MAKEFILES",
@@ -827,7 +839,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/Admin/Documents/mingw64/bin/objcopy.exe"
+			"value" : "D:/ProgramFiles/mingw64/bin/objcopy.exe"
 		},
 		{
 			"name" : "CMAKE_OBJDUMP",
@@ -843,7 +855,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/Admin/Documents/mingw64/bin/objdump.exe"
+			"value" : "D:/ProgramFiles/mingw64/bin/objdump.exe"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -907,7 +919,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/Admin/Documents/mingw64/bin/ranlib.exe"
+			"value" : "D:/ProgramFiles/mingw64/bin/ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER",
@@ -923,7 +935,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/Admin/Documents/mingw64/bin/windres.exe"
+			"value" : "D:/ProgramFiles/mingw64/bin/windres.exe"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER_WORKS",
@@ -1031,7 +1043,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/Admin/Documents/mingw64/bin/readelf.exe"
+			"value" : "D:/ProgramFiles/mingw64/bin/readelf.exe"
 		},
 		{
 			"name" : "CMAKE_ROOT",
@@ -1043,7 +1055,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/Admin/Documents/mingw64/share/cmake-3.26"
+			"value" : "D:/ProgramFiles/Cmake/share/cmake-3.26"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1251,7 +1263,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/Admin/Documents/mingw64/bin/strip.exe"
+			"value" : "D:/ProgramFiles/mingw64/bin/strip.exe"
 		},
 		{
 			"name" : "CMAKE_VERBOSE_MAKEFILE",
@@ -1359,7 +1371,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Admin/Documents/mit/assignment7/build"
+			"value" : "D:/ComputerScience/Graphics/MIT/assignment7/build"
 		},
 		{
 			"name" : "raytracer_IS_TOP_LEVEL",
@@ -1383,7 +1395,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Admin/Documents/mit/assignment7"
+			"value" : "D:/ComputerScience/Graphics/MIT/assignment7"
 		}
 	],
 	"kind" : "cache",

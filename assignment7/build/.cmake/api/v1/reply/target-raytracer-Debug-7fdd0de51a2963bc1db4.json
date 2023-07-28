@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "C:/Users/Admin/Documents/mit/assignment7/raytracer.exe"
+			"path" : "D:/ComputerScience/Graphics/MIT/assignment7/raytracer.exe"
 		},
 		{
-			"path" : "C:/Users/Admin/Documents/mit/assignment7/raytracer.pdb"
+			"path" : "D:/ComputerScience/Graphics/MIT/assignment7/raytracer.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -65,11 +65,11 @@
 			[
 				{
 					"backtrace" : 4,
-					"path" : "C:/Users/Admin/Documents/mit/assignment7/include"
+					"path" : "D:/ComputerScience/Graphics/MIT/assignment7/include"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "C:/Users/Admin/Documents/mit/assignment7/external"
+					"path" : "D:/ComputerScience/Graphics/MIT/assignment7/external"
 				}
 			],
 			"language" : "CXX",
@@ -114,12 +114,12 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-LC:\\Users\\Admin\\Documents\\mit\\assignment7\\lib",
+				"fragment" : "-LD:\\ComputerScience\\Graphics\\MIT\\assignment7\\lib",
 				"role" : "libraryPath"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "C:\\Users\\Admin\\Documents\\mit\\assignment7\\lib\\libfreeglut.lib",
+				"fragment" : "D:\\ComputerScience\\Graphics\\MIT\\assignment7\\lib\\libfreeglut.lib",
 				"role" : "libraries"
 			},
 			{

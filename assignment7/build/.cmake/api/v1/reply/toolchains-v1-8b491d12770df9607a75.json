@@ -10,17 +10,17 @@
 				{
 					"includeDirectories" : 
 					[
-						"C:/Users/Admin/Documents/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include",
-						"C:/Users/Admin/Documents/mingw64/include",
-						"C:/Users/Admin/Documents/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed",
-						"C:/Users/Admin/Documents/mingw64/x86_64-w64-mingw32/include"
+						"D:/ProgramFiles/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include",
+						"D:/ProgramFiles/mingw64/include",
+						"D:/ProgramFiles/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed",
+						"D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include"
 					],
 					"linkDirectories" : 
 					[
-						"C:/Users/Admin/Documents/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0",
-						"C:/Users/Admin/Documents/mingw64/lib/gcc",
-						"C:/Users/Admin/Documents/mingw64/x86_64-w64-mingw32/lib",
-						"C:/Users/Admin/Documents/mingw64/lib"
+						"D:/ProgramFiles/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0",
+						"D:/ProgramFiles/mingw64/lib/gcc",
+						"D:/ProgramFiles/mingw64/x86_64-w64-mingw32/lib",
+						"D:/ProgramFiles/mingw64/lib"
 					],
 					"linkFrameworkDirectories" : [],
 					"linkLibraries" : 
@@ -42,8 +42,8 @@
 						"kernel32"
 					]
 				},
-				"path" : "C:/Users/Admin/Documents/mingw64/bin/gcc.exe",
-				"version" : "13.1.0"
+				"path" : "D:/ProgramFiles/mingw64/bin/gcc.exe",
+				"version" : "12.2.0"
 			},
 			"language" : "C",
 			"sourceFileExtensions" : 
@@ -60,20 +60,20 @@
 				{
 					"includeDirectories" : 
 					[
-						"C:/Users/Admin/Documents/mingw64/include/c++/13.1.0",
-						"C:/Users/Admin/Documents/mingw64/include/c++/13.1.0/x86_64-w64-mingw32",
-						"C:/Users/Admin/Documents/mingw64/include/c++/13.1.0/backward",
-						"C:/Users/Admin/Documents/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include",
-						"C:/Users/Admin/Documents/mingw64/include",
-						"C:/Users/Admin/Documents/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed",
-						"C:/Users/Admin/Documents/mingw64/x86_64-w64-mingw32/include"
+						"D:/ProgramFiles/mingw64/include/c++/12.2.0",
+						"D:/ProgramFiles/mingw64/include/c++/12.2.0/x86_64-w64-mingw32",
+						"D:/ProgramFiles/mingw64/include/c++/12.2.0/backward",
+						"D:/ProgramFiles/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include",
+						"D:/ProgramFiles/mingw64/include",
+						"D:/ProgramFiles/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed",
+						"D:/ProgramFiles/mingw64/x86_64-w64-mingw32/include"
 					],
 					"linkDirectories" : 
 					[
-						"C:/Users/Admin/Documents/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0",
-						"C:/Users/Admin/Documents/mingw64/lib/gcc",
-						"C:/Users/Admin/Documents/mingw64/x86_64-w64-mingw32/lib",
-						"C:/Users/Admin/Documents/mingw64/lib"
+						"D:/ProgramFiles/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0",
+						"D:/ProgramFiles/mingw64/lib/gcc",
+						"D:/ProgramFiles/mingw64/x86_64-w64-mingw32/lib",
+						"D:/ProgramFiles/mingw64/lib"
 					],
 					"linkFrameworkDirectories" : [],
 					"linkLibraries" : 
@@ -98,8 +98,8 @@
 						"kernel32"
 					]
 				},
-				"path" : "C:/Users/Admin/Documents/mingw64/bin/g++.exe",
-				"version" : "13.1.0"
+				"path" : "D:/ProgramFiles/mingw64/bin/g++.exe",
+				"version" : "12.2.0"
 			},
 			"language" : "CXX",
 			"sourceFileExtensions" : 
@@ -121,7 +121,7 @@
 			"compiler" : 
 			{
 				"implicit" : {},
-				"path" : "C:/Users/Admin/Documents/mingw64/bin/windres.exe"
+				"path" : "D:/ProgramFiles/mingw64/bin/windres.exe"
 			},
 			"language" : "RC",
 			"sourceFileExtensions" : 

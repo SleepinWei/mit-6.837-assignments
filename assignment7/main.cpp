@@ -98,12 +98,21 @@ void renderFunction()
 	Grid *g = p_tracer->grid;
 
 	RayTracingStats::Initialize(width, height, group->getBoundingBox(), g->nx, g->ny, g->nz);
+	int sz = std::max(width, height);
 
-	for (int i = 0; i < height; i++)
+	for (int _i = 0; _i < height; _i++)
 	{
-		for (int j = 0; j < width; j++)
+		int i = _i; 
+		if(height < width){
+			i += (width - height) / 2; 
+		}
+		for (int _j = 0; _j < width; _j++)
 		{
-			Vec2f coordinate(j * 1.0f / width, i * 1.0f / height);
+			int j = _j; 
+			if(width < height){
+				j += (width - height) / 2;
+			}
+			Vec2f coordinate(j * 1.0f / sz, i * 1.0f / sz);
 			Vec3f Color(0,0,0); 
 			for (int s = 0; s < samples; ++s)
 			{
@@ -123,17 +132,24 @@ void renderFunction()
 
 				Color = p_tracer->traceRay(r, 0.0f, 0, 1.0f, 1.0f, h);
 
-				if(film){
-					film->setSample(j, i, s, _offset, Color);
-				}
+				film->setSample(_j, _i, s, _offset, Color);
 				// debug
 				// image.SaveTGA(output_file);
 			}
+
+		}
+	}
+
+	for (int i = 0; i < height; i++)
+	{
+		for (int j = 0; j < width; j++)
+		{
 			if(filter){
 				Vec3f resultColor = filter->getColor(j, i, film);
 				image.SetPixel(j, i, resultColor);
 			}
 			else{
+				Vec3f Color = film->getSample(j, i, 0).getColor();
 				image.SetPixel(j, i, Color);
 			}
 		}

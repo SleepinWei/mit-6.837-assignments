@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "C:/Users/Admin/Documents/mit/assignment7/libraytracer.dll.a"
+  "C:/Users/Admin/Documents/mit/assignment7/raytracer.exe"
+  "C:/Users/Admin/Documents/mit/assignment7/raytracer.exe.manifest"
+  "C:/Users/Admin/Documents/mit/assignment7/raytracer.pdb"
   "CMakeFiles/raytracer.dir/Plane.obj"
   "CMakeFiles/raytracer.dir/Plane.obj.d"
   "CMakeFiles/raytracer.dir/Transform.obj"
@@ -11,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/raytracer.dir/camera.obj.d"
   "CMakeFiles/raytracer.dir/film.obj"
   "CMakeFiles/raytracer.dir/film.obj.d"
+  "CMakeFiles/raytracer.dir/filter.obj"
+  "CMakeFiles/raytracer.dir/filter.obj.d"
   "CMakeFiles/raytracer.dir/glCanvas.obj"
   "CMakeFiles/raytracer.dir/glCanvas.obj.d"
   "CMakeFiles/raytracer.dir/group.obj"
@@ -41,10 +47,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/raytracer.dir/scene_parser.obj.d"
   "CMakeFiles/raytracer.dir/sphere.obj"
   "CMakeFiles/raytracer.dir/sphere.obj.d"
-  "D:/ComputerScience/Graphics/MIT/assignment7/libraytracer.dll.a"
-  "D:/ComputerScience/Graphics/MIT/assignment7/raytracer.exe"
-  "D:/ComputerScience/Graphics/MIT/assignment7/raytracer.exe.manifest"
-  "D:/ComputerScience/Graphics/MIT/assignment7/raytracer.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

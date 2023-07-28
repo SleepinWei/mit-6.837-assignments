@@ -1,4 +1,5 @@
 #include "camera.h"
+#include"filter.h"
 #include "glCanvas.h"
 #include "grid.h"
 #include "group.h"
@@ -40,7 +41,12 @@ int random_samples = 0;
 int uniform_samples = 0;
 int jittered_samples = 0;
 char *sample_file = nullptr;
-float zoom_factor;
+int zoom_factor = 0;
+
+char *render_filter_file = nullptr;
+int filter_zoom_factor = 0;
+
+float box_filter_radius = 0, tent_filter_radius = 0, gaussian_filter_radius = 0;
 
 bool enable_grid = false;
 bool visualize_grid = false;
@@ -57,11 +63,36 @@ void renderFunction()
 	Camera *camera = p_parser->getCamera();
 	Group *group = p_parser->getGroup();
 	Vec3f background = p_parser->getBackgroundColor();
-	Sampler *sampler = new RandomSampler();
+	Sampler *sampler = nullptr;
+	Filter *filter = nullptr;
+	Film *film = nullptr;
+	int samples = 1; 
+	if(random_samples){
+		sampler = new RandomSampler(random_samples);
+		samples = random_samples;
+	}
+	else if (uniform_samples){
+		sampler = new UniformSampler(uniform_samples);
+		samples = uniform_samples;
+	}
+	else if (jittered_samples){
+		sampler = new JitteredSampler(jittered_samples);
+		samples = jittered_samples;
+	}
 
-	int w = width, h = height;
-	Image image(w, h);
-	Film film(width, height, random_samples);
+	film = new Film(width, height, samples);
+
+	if(box_filter_radius){
+		filter = new BoxFilter(box_filter_radius);
+	}
+	else if (tent_filter_radius){
+		filter = new TentFilter(tent_filter_radius);
+	}
+	else if (gaussian_filter_radius){
+		filter = new GaussianFilter(gaussian_filter_radius);
+	}
+
+	Image image(width, height);
 
 	int numlight = p_parser->getNumLights();
 	Grid *g = p_tracer->grid;
@@ -70,13 +101,19 @@ void renderFunction()
 
 	for (int i = 0; i < height; i++)
 	{
-		for (int j = 0; j < w; j++)
+		for (int j = 0; j < width; j++)
 		{
-			Vec2f coordinate(j * 1.0f / w, i * 1.0f / height);
-			for (int s = 0; s < random_samples; ++s)
+			Vec2f coordinate(j * 1.0f / width, i * 1.0f / height);
+			Vec3f Color(0,0,0); 
+			for (int s = 0; s < samples; ++s)
 			{
-				Vec2f _coord;
-				Vec2f offset = sampler->getSamplePosition(s);
+				Vec2f _coord = coordinate;
+				Vec2f offset(0, 0);
+				if(sampler){
+					offset = sampler->getSamplePosition(s);
+				}
+				Vec2f _offset = offset; 
+				offset.Divide(width, height);
 				Vec2f::Add(_coord, coordinate, offset);
 
 				Hit h;
@@ -84,13 +121,20 @@ void renderFunction()
 
 				Ray r = camera->generateRay(_coord);
 
-				Vec3f Color = p_tracer->traceRay(r, 0.0f, 0, 1.0f, 1.0f, h);
+				Color = p_tracer->traceRay(r, 0.0f, 0, 1.0f, 1.0f, h);
 
-				image.SetPixel(j, i, Color);
-
+				if(film){
+					film->setSample(j, i, s, _offset, Color);
+				}
 				// debug
 				// image.SaveTGA(output_file);
-				film.setSample(j, i, s, offset, Color);
+			}
+			if(filter){
+				Vec3f resultColor = filter->getColor(j, i, film);
+				image.SetPixel(j, i, resultColor);
+			}
+			else{
+				image.SetPixel(j, i, Color);
 			}
 		}
 	}
@@ -103,13 +147,26 @@ void renderFunction()
 	{
 		char out_prefix[100] = "./result/";
 		image.SaveTGA(strcat(out_prefix, output_file));
-		char out_depth_prefix[100] = "./result/";
 	}
-
 	if (sample_file)
 	{
-		//
-		film.renderSamples(sample_file, zoom_factor);
+		char rff[100] = "./result/";
+		strcat(rff, sample_file);
+		film->renderSamples(rff, zoom_factor);
+	}
+	if(render_filter_file){
+		char rff[100] = "./result/";
+		strcat(rff, render_filter_file);
+		film->renderFilter(rff, filter_zoom_factor, filter);
+	}
+	if(sampler){
+		delete sampler; 
+	}
+	if(filter){
+		delete filter;
+	}
+	if(film){
+		delete film; 
 	}
 }
 
@@ -240,14 +297,34 @@ int main(int argc, char **argv)
 		else if (!strcmp(argv[i], "-uniform_samples"))
 		{
 			++i;
-			uniform_samples = atof(argv[i]);
+			uniform_samples = atoi(argv[i]);
 		}
 		else if (!strcmp(argv[i], "-jittered_samples"))
 		{
 			++i;
-			jittered_samples = atof(argv[i]);
+			jittered_samples = atoi(argv[i]);
 		}
-
+		else if (!strcmp(argv[i], "-box_filter"))
+		{
+			++i;
+			box_filter_radius = atof(argv[i]);
+		}
+		else if (!strcmp(argv[i], "-tent_filter"))
+		{
+			++i;
+			tent_filter_radius = atof(argv[i]);
+		}
+		else if (!strcmp(argv[i], "-gaussian_filter"))
+		{
+			++i;
+			gaussian_filter_radius = atof(argv[i]);
+		}
+		else if (!strcmp(argv[i], "-render_filter")){
+			++i;
+			render_filter_file = argv[i];
+			++i;
+			filter_zoom_factor = atoi(argv[i]);
+		}
 		else
 		{
 			printf("whoops error with command line argument %d: '%s'\n", i, argv[i]);

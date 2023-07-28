@@ -1,0 +1,3 @@
+D:\ProgramFiles\Cmake\bin\cmake.exe -E rm -f CMakeFiles\raytracer.dir/objects.a
+D:\ProgramFiles\mingw64\bin\ar.exe qc CMakeFiles\raytracer.dir/objects.a @CMakeFiles\raytracer.dir\objects1.rsp
+D:\ProgramFiles\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\raytracer.dir/objects.a -Wl,--no-whole-archive -o D:\ComputerScience\Graphics\MIT\assignment7\raytracer.exe -Wl,--out-implib,D:\ComputerScience\Graphics\MIT\assignment7\libraytracer.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\raytracer.dir\linkLibs.rsp

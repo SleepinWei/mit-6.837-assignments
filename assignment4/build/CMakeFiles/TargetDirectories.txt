@@ -1,3 +1,0 @@
-C:/Users/Admin/Documents/mit/assignment4/build/CMakeFiles/raytracer.dir
-C:/Users/Admin/Documents/mit/assignment4/build/CMakeFiles/edit_cache.dir
-C:/Users/Admin/Documents/mit/assignment4/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1 @@
+raytracer -input scene6_01_sphere.txt -output output6_01a.tga -size 200 200 
